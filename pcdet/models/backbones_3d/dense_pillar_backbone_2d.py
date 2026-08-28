@@ -117,19 +117,12 @@ class PillarDenseBackBone8x(nn.Module):
         elif sparse_type != 'none':
             # DensityConv / SparseAwareConv path (mask-based)
             from pcdet.models.backbones_2d.sparse_conv_modules import (
-                DensityConv2d, SparseAwareConv2d, DACASparseConv2d, SparseStage
+                DensityConv2d, SparseAwareConv2d, SparseStage
             )
-            from functools import partial as _partial
             if sparse_type == 'partial':
                 sparse_cls = DensityConv2d
             elif sparse_type == 'sparse_aware':
                 sparse_cls = SparseAwareConv2d
-            elif sparse_type == 'daca':
-                _daca_thresh = float(model_cfg.get('DACA_THRESHOLD', 0.0))
-                _daca_src = str(model_cfg.get('DACA_GATE_SOURCE', 'mask_sum'))
-                sparse_cls = _partial(DACASparseConv2d,
-                                      threshold=_daca_thresh,
-                                      gate_source=_daca_src)
             else:
                 raise ValueError(f"Unknown SPARSE_CONV_TYPE: {sparse_type}")
 

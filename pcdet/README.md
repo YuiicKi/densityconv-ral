@@ -19,7 +19,9 @@ data loading, and training entry points (`tools/train.py`, `tools/test.py`).
 | `deploy/export_conv2d_rr13.py` | ONNX export for the Conv2d-only model |
 | `deploy/gen_dc_bev_for_step7.py`, `deploy/gen_conv2d_bev_for_step7.py` | calibration BEV/mask rendering from training-sample IDs (paired calibration sets) |
 | `deploy/compile_*.yaml` | example hb_compile configs (the fixed-percentile configs used for the paper's main results are in `../compiler_configs/`) |
+| `deploy/activation_stats.py` | full-val activation statistics (Sec. III-B aggregate numbers) |
 | `patches/register_densepillar.patch` | adds the backbone import/registration to the host framework |
+| `TRAINING.md` | exact launch commands, batch-size semantics, seed mechanism |
 
 ## Placement
 

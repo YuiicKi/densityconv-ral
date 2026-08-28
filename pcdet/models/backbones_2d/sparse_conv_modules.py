@@ -60,7 +60,7 @@ class DensityConv2d(nn.Module):
 
 class SparseAwareConv2d(nn.Module):
     """
-    Sparse-Aware Convolution (ours).
+    Sparse-Aware Convolution (historical amplification baseline).
 
     Normalization: out = Conv(x * M) * K^2 / clamp(valid_count, min=1)
     - valid_count: number of valid pixels in receptive field (fixed all-1 kernel)
@@ -115,105 +115,6 @@ class SparseAwareConv2d(nn.Module):
         return out, new_mask
 
 
-
-
-
-class DACASparseConv2d(nn.Module):
-    """
-    DACA with configurable gate source for paper #2 attractor experiments.
-    Output: out = Conv(x * mask) * gate, where gate is binary.
-
-    Gate sources (yaml DACA_GATE_SOURCE):
-      - "mask_sum" (default): gate = (mask_sum > threshold * k^2)
-      - "sobel": gate = top-K of |Sobel(x*mask)|, K matched to mask_sum>0 coverage
-      - "energy": gate = top-K of avg_pool((x*mask)^2), coverage matched
-      - "random": gate = random binary at coverage matching mask_sum>0
-    """
-
-    def __init__(self, in_channels, out_channels, kernel_size,
-                 stride=1, padding=0, bias=False,
-                 threshold=0.0, gate_source="mask_sum"):
-        super().__init__()
-        self.conv = nn.Conv2d(
-            in_channels, out_channels, kernel_size,
-            stride=stride, padding=padding, bias=bias
-        )
-        k = kernel_size if isinstance(kernel_size, int) else kernel_size[0]
-        self.register_buffer("k_sq", torch.tensor(float(k * k)))
-        self.register_buffer("thresh_count", torch.tensor(float(threshold) * float(k * k)))
-        self.threshold = float(threshold)
-        self.gate_source = gate_source
-        self.stride_val = stride if isinstance(stride, int) else stride[0]
-
-        self.mask_conv = nn.Conv2d(1, 1, kernel_size, stride=stride,
-                                   padding=padding, bias=False)
-        nn.init.ones_(self.mask_conv.weight)
-        for p in self.mask_conv.parameters():
-            p.requires_grad = False
-
-        if gate_source == "sobel":
-            sx = torch.tensor([[-1.0, 0.0, 1.0],
-                               [-2.0, 0.0, 2.0],
-                               [-1.0, 0.0, 1.0]]) / 4.0
-            sy = sx.t().contiguous()
-            self.register_buffer("sobel_x", sx.view(1, 1, 3, 3))
-            self.register_buffer("sobel_y", sy.view(1, 1, 3, 3))
-
-    @torch.no_grad()
-    def _coverage_matched_gate(self, score, ref_active):
-        B = score.shape[0]
-        flat_score = score.view(B, -1)
-        n_active = ref_active.view(B, -1).sum(dim=1).long()
-        gate_flat = torch.zeros_like(flat_score)
-        for b in range(B):
-            k = max(1, int(n_active[b].item()))
-            if k >= flat_score.shape[1]:
-                gate_flat[b] = 1.0
-            else:
-                kth = flat_score[b].topk(k, sorted=False).values.min()
-                gate_flat[b] = (flat_score[b] >= kth).float()
-        return gate_flat.view_as(score)
-
-    def forward(self, x, mask):
-        out = self.conv(x * mask)
-
-        with torch.no_grad():
-            mask_sum = self.mask_conv(mask)
-            ref_active = (mask_sum > 0).float()
-
-        if self.gate_source == "mask_sum":
-            gate = (mask_sum > self.thresh_count).float()
-
-        elif self.gate_source == "sobel":
-            with torch.no_grad():
-                xm = (x * mask).mean(dim=1, keepdim=True)
-                gx = torch.nn.functional.conv2d(xm, self.sobel_x, padding=1)
-                gy = torch.nn.functional.conv2d(xm, self.sobel_y, padding=1)
-                grad_mag = (gx * gx + gy * gy).clamp_min(0).sqrt()
-                if self.stride_val > 1:
-                    grad_mag = torch.nn.functional.avg_pool2d(grad_mag, self.stride_val)
-                grad_mag = grad_mag * ref_active
-                gate = self._coverage_matched_gate(grad_mag, ref_active)
-
-        elif self.gate_source == "energy":
-            with torch.no_grad():
-                e_map = (x * mask).pow(2).mean(dim=1, keepdim=True)
-                e_map = torch.nn.functional.avg_pool2d(e_map, 3, stride=1, padding=1)
-                if self.stride_val > 1:
-                    e_map = torch.nn.functional.avg_pool2d(e_map, self.stride_val)
-                e_map = e_map * ref_active
-                gate = self._coverage_matched_gate(e_map, ref_active)
-
-        elif self.gate_source == "random":
-            with torch.no_grad():
-                rand = torch.rand_like(mask_sum) * ref_active
-                gate = self._coverage_matched_gate(rand, ref_active)
-
-        else:
-            raise ValueError(f"Unknown DACA gate_source: {self.gate_source}")
-
-        out = out * gate
-        return out, gate
 
 
 

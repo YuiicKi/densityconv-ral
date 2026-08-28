@@ -43,7 +43,6 @@ DATA_CONFIG:
             - NAME: random_world_translation
               NOISE_TRANSLATE_STD: [0.5, 0.5, 0.5]
 
-
     DATA_PROCESSOR:
         - NAME: mask_points_and_boxes_outside_range
           REMOVE_OUTSIDE_BOXES: True
@@ -62,7 +61,6 @@ DATA_CONFIG:
             'test': 120000
           }
 
-
 MODEL:
     NAME: PillarNet
 
@@ -75,20 +73,10 @@ MODEL:
         NUM_FILTERS: [ 32 ]
 
     BACKBONE_3D:
-        # 核心改动：使用 Dense Pillar Backbone（无 spconv）
         NAME: PillarDenseBackBone8x
-        # 设计说明：
-        # 1. 替换 PillarRes18BackBone8x（spconv 版本）
-        # 2. 使用纯 Conv2d 实现，适合跨平台部署（Mac/RDK/NVIDIA）
-        # 3. 输出 5 个多尺度特征图（x_conv1~5），与 spconv 版本接口一致
-        # 4. stride: 1, 2, 4, 8, 16（与 ResNet18 对齐）
 
     BACKBONE_2D:
       NAME: BaseBEVBackboneV1
-      # 设计说明：
-      # 1. 保持与原 CenterPoint 完全一致
-      # 2. 接收 PillarDenseBackBone8x 的多尺度特征
-      # 3. 进行 FPN 特征融合
 
       LAYER_NUMS: [ 5, 5 ]
       LAYER_STRIDES: [ 1, 2 ]
@@ -99,10 +87,6 @@ MODEL:
     DENSE_HEAD:
         NAME: CenterHead
         CLASS_AGNOSTIC: False
-        # 设计说明：
-        # 1. 使用 CenterHead（纯 CNN），易于部署到 CoreML
-        # 2. 保持与 spconv 版本 CenterPoint 完全一致的配置
-        # 3. 6 个类别组，每组独立预测
 
         CLASS_NAMES_EACH_HEAD: [
             ['car'],
@@ -153,14 +137,9 @@ MODEL:
         RECALL_THRESH_LIST: [0.3, 0.5, 0.7]
         EVAL_METRIC: kitti
 
-
 OPTIMIZATION:
-    # 训练超参数设计：
-    # 1. BATCH_SIZE_PER_GPU: 8（与原 CenterPoint 对齐）
-    # 2. NUM_EPOCHS: 20（充分训练，与 TransFusion 实验对齐）
-    # 3. LR: 0.001（标准学习率，Dense Pillar 收敛稳定）
-    # 4. OneCycle 调度：稳定收敛，防止过拟合
-
+    # NOTE: BATCH_SIZE_PER_GPU is the historical per-GPU default; all reported
+    # nuScenes runs override it via the CLI (--batch_size 8 = global). See TRAINING.md.
     BATCH_SIZE_PER_GPU: 8
     NUM_EPOCHS: 20
 
