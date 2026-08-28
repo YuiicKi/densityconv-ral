@@ -1,0 +1,97 @@
+{
+ "node_config": {
+  "/Greater": {
+   "qtype": "float32"
+  },
+  "/conv1/blocks.0/conv1/Div_mul": {
+   "qtype": "float32"
+  },
+  "/conv1/blocks.0/conv1/Greater": {
+   "qtype": "float32"
+  },
+  "/conv1/blocks.0/conv1/Mul_1": {
+   "qtype": "float32"
+  },
+  "/conv1/blocks.0/conv1/mask_conv/Conv": {
+   "qtype": "float32"
+  },
+  "/conv1/blocks.0/conv2/Div_mul": {
+   "qtype": "float32"
+  },
+  "/conv1/blocks.0/conv2/Greater": {
+   "qtype": "float32"
+  },
+  "/conv1/blocks.0/conv2/Mul_1": {
+   "qtype": "float32"
+  },
+  "/conv1/blocks.0/conv2/mask_conv/Conv": {
+   "qtype": "float32"
+  },
+  "/conv1/init_conv/Div_mul": {
+   "qtype": "float32"
+  },
+  "/conv1/init_conv/Greater": {
+   "qtype": "float32"
+  },
+  "/conv1/init_conv/Mul_1": {
+   "qtype": "float32"
+  },
+  "/conv1/init_conv/mask_conv/Conv": {
+   "qtype": "float32"
+  },
+  "/conv2/blocks.0/conv1/Div_mul": {
+   "qtype": "float32"
+  },
+  "/conv2/blocks.0/conv1/Greater": {
+   "qtype": "float32"
+  },
+  "/conv2/blocks.0/conv1/Mul_1": {
+   "qtype": "float32"
+  },
+  "/conv2/blocks.0/conv1/mask_conv/Conv": {
+   "qtype": "float32"
+  },
+  "/conv2/blocks.0/conv2/Div_mul": {
+   "qtype": "float32"
+  },
+  "/conv2/blocks.0/conv2/Greater": {
+   "qtype": "float32"
+  },
+  "/conv2/blocks.0/conv2/Mul_1": {
+   "qtype": "float32"
+  },
+  "/conv2/blocks.0/conv2/mask_conv/Conv": {
+   "qtype": "float32"
+  },
+  "/conv2/blocks.1/conv1/Div_mul": {
+   "qtype": "float32"
+  },
+  "/conv2/blocks.1/conv1/Greater": {
+   "qtype": "float32"
+  },
+  "/conv2/blocks.1/conv1/Mul_1": {
+   "qtype": "float32"
+  },
+  "/conv2/blocks.1/conv1/mask_conv/Conv": {
+   "qtype": "float32"
+  },
+  "/conv2/blocks.1/conv2/Mul_1": {
+   "qtype": "float32"
+  },
+  "/conv2/blocks.1/conv2/mask_conv/Conv": {
+   "qtype": "float32"
+  },
+  "/conv2/init_conv/Div_mul": {
+   "qtype": "float32"
+  },
+  "/conv2/init_conv/Greater": {
+   "qtype": "float32"
+  },
+  "/conv2/init_conv/Mul_1": {
+   "qtype": "float32"
+  },
+  "/conv2/init_conv/mask_conv/Conv": {
+   "qtype": "float32"
+  }
+ }
+}

@@ -1,0 +1,55 @@
+ucp_version: 3.13.6_(4.7.5 HBRT)
+{
+  "perf_result": {
+    "FPS": 28.573020935058594,
+    "average_latency": 34.971900939941406
+  },
+  "running_condition": {
+    "core_id": "0",
+    "frame_count": 20,
+    "model_name": "c2_rr13_maxpct_pc_asym_s42_256",
+    "run_time": 700.2490234375,
+    "thread_num": 1
+  }
+}
+***
+{
+  "model_latency": {
+    "Node-0-BPU-/conv2/conv2.4/conv2/Conv_id_73_bpu_segment_0": {
+      "Stage1-GenerateBpuTask": {
+        "avg_time": 0.0724,
+        "max_time": 0.104,
+        "min_time": 0.06
+      },
+      "Stage2-BpuCoreProcess": {
+        "avg_time": 34.826800000000006,
+        "max_time": 35.103,
+        "min_time": 34.577
+      },
+      "Total": {
+        "avg_time": 34.9168,
+        "max_time": 35.185,
+        "min_time": 34.663
+      }
+    }
+  },
+  "processor_latency": {
+    "BPU_inference_time_cost": {
+      "avg_time": 34.9168,
+      "max_time": 35.185,
+      "min_time": 34.663
+    },
+    "CPU_inference_time_cost": {
+      "avg_time": 0.0,
+      "max_time": 0.0,
+      "min_time": 0.0
+    }
+  },
+  "task_latency": {
+    "TaskRunningTime": {
+      "avg_time": 34.950300000000006,
+      "max_time": 35.211,
+      "min_time": 34.689
+    }
+  }
+}

@@ -1,0 +1,19 @@
+model_parameters:
+  onnx_model: '/workspace/export/densepillar_centerpoint_gt05.onnx'
+  march: "nash-e"
+  working_dir: '/workspace/revision_rr26/02_fixed_quant_probe/quant_runs/DC_paperv1_max_pt_sym_rand256_expE_oe320'
+  output_model_file_prefix: 'dc_max_pt_sym_expE'
+input_parameters:
+  input_name: 'bev_features;bev_mask'
+  input_shape: '1x32x1088x1088;1x1x1088x1088'
+  input_type_rt: 'featuremap;featuremap'
+  input_type_train: 'featuremap;featuremap'
+  input_layout_train: 'NCHW;NCHW'
+  norm_type: 'no_preprocess;no_preprocess'
+calibration_parameters:
+  cal_data_dir: '/workspace/export/train_dc_expE/bev;/workspace/export/train_dc_expE/mask'
+  cal_data_type: 'float32;float32'
+  calibration_type: 'max'
+  optimization: symmetric
+compiler_parameters:
+  optimize_level: 'O2'

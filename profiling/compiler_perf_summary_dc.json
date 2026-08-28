@@ -1,0 +1,1540 @@
+{
+ "DDR access data": {
+  "DDR bytes per run": 975965312,
+  "DDR bytes per second": 25735068515,
+  "DDR megabytes per run": 930.753,
+  "DDR megabytes per second": 24542.9,
+  "dynamic memory": 240439296,
+  "input memory": 156254208,
+  "intermediate memory": 0,
+  "loaded bytes per run": 624493696,
+  "min memory requirement": 300288632,
+  "output memory": 6092800,
+  "static memory": 59849336,
+  "stored bytes per run": 351471616,
+  "temporary memory": 78092288
+ },
+ "interval info": {
+  "interval computing unit utilization": [
+   0.525,
+   0.606,
+   0.608,
+   0.607,
+   0.46,
+   0.789,
+   0.996,
+   0.974,
+   0.989,
+   0.985,
+   0.987,
+   0.981,
+   0.978,
+   0.986,
+   0.992,
+   0.988,
+   0.995,
+   0.992,
+   0.999,
+   0.999,
+   0.999,
+   0.999,
+   0.984,
+   1,
+   0.999,
+   0.999,
+   0.999,
+   0.999,
+   0.985,
+   0.979,
+   1,
+   1,
+   1,
+   1,
+   0.999,
+   0.998,
+   0.998,
+   0.915
+  ],
+  "interval computing units utilization": [
+   0.525,
+   0.606,
+   0.608,
+   0.607,
+   0.46,
+   0.789,
+   0.996,
+   0.974,
+   0.989,
+   0.985,
+   0.987,
+   0.981,
+   0.978,
+   0.986,
+   0.992,
+   0.988,
+   0.995,
+   0.992,
+   0.999,
+   0.999,
+   0.999,
+   0.999,
+   0.984,
+   1,
+   0.999,
+   0.999,
+   0.999,
+   0.999,
+   0.985,
+   0.979,
+   1,
+   1,
+   1,
+   1,
+   0.999,
+   0.998,
+   0.998,
+   0.915
+  ],
+  "interval loading bandwidth (megabytes/s)": [
+   30230,
+   30311,
+   30359,
+   30280,
+   29753,
+   25992,
+   23953,
+   24367,
+   22160,
+   23436,
+   25671,
+   25027,
+   20531,
+   19212,
+   24558,
+   23106,
+   23084,
+   23512,
+   17228,
+   13013,
+   11834,
+   12333,
+   9849,
+   7124,
+   6320,
+   8118,
+   8086,
+   3803,
+   4264,
+   6778,
+   7369,
+   6675,
+   5825,
+   5507,
+   4701,
+   5362,
+   5196,
+   3815
+  ],
+  "interval number": 38,
+  "interval storing bandwidth (megabytes/s)": [
+   7517,
+   7625,
+   7734,
+   7735,
+   5994,
+   8817,
+   17116,
+   20989,
+   21581,
+   14662,
+   7232,
+   7620,
+   17645,
+   23790,
+   18396,
+   17232,
+   15297,
+   12816,
+   12576,
+   11023,
+   8632,
+   5246,
+   3693,
+   4515,
+   4873,
+   7101,
+   4644,
+   0,
+   1664,
+   4320,
+   4914,
+   4515,
+   4517,
+   4781,
+   3009,
+   1306,
+   2342,
+   3493
+  ],
+  "interval time (ms)": 1
+ },
+ "layer details": [
+  {
+   "active period of time": "0 ~ 167 us (167 us)",
+   "computing cost (no DDR)": "24 us (0% of model)",
+   "layer name": "bev_mask_HzCalibration_id_1",
+   "load cost": "130 us (0.3% of model)",
+   "origin ops": 0,
+   "store cost": "33 us (0% of model)"
+  },
+  {
+   "active period of time": "139 ~ 5446 us (5307 us)",
+   "computing cost (no DDR)": "211 us (0.5% of model)",
+   "layer name": "/Greater_id_4",
+   "load cost": "248 us (0.6% of model)",
+   "origin ops": 0,
+   "store cost": "239 us (0.6% of model)"
+  },
+  {
+   "active period of time": "140 ~ 5313 us (5173 us)",
+   "computing cost (no DDR)": "1380 us (3.6% of model)",
+   "layer name": "bev_features_HzCalibration_id_6",
+   "load cost": "4085 us (10.7% of model)",
+   "origin ops": 0,
+   "store cost": "0"
+  },
+  {
+   "active period of time": "161 ~ 15950 us (15789 us)",
+   "computing cost (no DDR)": "823 us (2.1% of model)",
+   "layer name": "/conv1/init_conv/Mul_id_8",
+   "load cost": "1 us (0% of model)",
+   "origin ops": 0,
+   "store cost": "0"
+  },
+  {
+   "active period of time": "192 ~ 7265 us (7073 us)",
+   "computing cost (no DDR)": "1451 us (3.8% of model)",
+   "layer name": "/conv1/init_conv/conv/Conv_id_14",
+   "load cost": "1188 us (3.1% of model)",
+   "origin ops": 21818769408,
+   "store cost": "1292 us (3.4% of model)"
+  },
+  {
+   "active period of time": "5446 ~ 15962 us (10516 us)",
+   "computing cost (no DDR)": "188 us (0.4% of model)",
+   "layer name": "/conv1/init_conv/mask_conv/Conv_id_20",
+   "load cost": "70 us (0.1% of model)",
+   "origin ops": 21307392,
+   "store cost": "0"
+  },
+  {
+   "active period of time": "5449 ~ 14814 us (9365 us)",
+   "computing cost (no DDR)": "0",
+   "layer name": "/conv1/init_conv/Div_mul_input_1_HzCalibration_id_24",
+   "load cost": "1 us (0% of model)",
+   "origin ops": 0,
+   "store cost": "0"
+  },
+  {
+   "active period of time": "5449 ~ 15963 us (10514 us)",
+   "computing cost (no DDR)": "218 us (0.5% of model)",
+   "layer name": "/conv1/init_conv/Div_mul_id_25",
+   "load cost": "2 us (0% of model)",
+   "origin ops": 0,
+   "store cost": "0"
+  },
+  {
+   "active period of time": "5450 ~ 15883 us (10433 us)",
+   "computing cost (no DDR)": "872 us (2.2% of model)",
+   "layer name": "/conv1/init_conv/Mul_1_id_28",
+   "load cost": "3 us (0% of model)",
+   "origin ops": 0,
+   "store cost": "0"
+  },
+  {
+   "active period of time": "5452 ~ 9017 us (3565 us)",
+   "computing cost (no DDR)": "101 us (0.2% of model)",
+   "layer name": "/conv1/init_conv/Greater_id_31",
+   "load cost": "33 us (0% of model)",
+   "origin ops": 0,
+   "store cost": "70 us (0.1% of model)"
+  },
+  {
+   "active period of time": "5468 ~ 9009 us (3541 us)",
+   "computing cost (no DDR)": "210 us (0.5% of model)",
+   "layer name": "UNIT_CONV_FOR_/conv1/init_bn/BatchNormalization_id_38",
+   "load cost": "1 us (0% of model)",
+   "origin ops": 75759616,
+   "store cost": "953 us (2.5% of model)"
+  },
+  {
+   "active period of time": "7299 ~ 8970 us (1671 us)",
+   "computing cost (no DDR)": "408 us (1.0% of model)",
+   "layer name": "/conv1/blocks.0/conv1/Mul_id_43",
+   "load cost": "960 us (2.5% of model)",
+   "origin ops": 0,
+   "store cost": "0"
+  },
+  {
+   "active period of time": "7314 ~ 8995 us (1681 us)",
+   "computing cost (no DDR)": "1142 us (3.0% of model)",
+   "layer name": "/conv1/blocks.0/conv1/conv/Conv_id_50",
+   "load cost": "1 us (0% of model)",
+   "origin ops": 21818769408,
+   "store cost": "0"
+  },
+  {
+   "active period of time": "7315 ~ 15961 us (8646 us)",
+   "computing cost (no DDR)": "114 us (0.3% of model)",
+   "layer name": "/conv1/blocks.0/conv1/mask_conv/Conv_id_56",
+   "load cost": "1 us (0% of model)",
+   "origin ops": 21307392,
+   "store cost": "0"
+  },
+  {
+   "active period of time": "7317 ~ 9001 us (1684 us)",
+   "computing cost (no DDR)": "905 us (2.3% of model)",
+   "layer name": "/conv1/blocks.0/conv1/Mul_1_id_64",
+   "load cost": "<1 us",
+   "origin ops": 0,
+   "store cost": "0"
+  },
+  {
+   "active period of time": "7317 ~ 8974 us (1657 us)",
+   "computing cost (no DDR)": "239 us (0.6% of model)",
+   "layer name": "/conv1/blocks.0/conv1/Div_mul_id_61",
+   "load cost": "0",
+   "origin ops": 0,
+   "store cost": "0"
+  },
+  {
+   "active period of time": "7317 ~ 9014 us (1697 us)",
+   "computing cost (no DDR)": "222 us (0.5% of model)",
+   "layer name": "UNIT_CONV_FOR_/conv1/blocks.0/bn1/BatchNormalization_id_74",
+   "load cost": "<1 us",
+   "origin ops": 75759616,
+   "store cost": "960 us (2.5% of model)"
+  },
+  {
+   "active period of time": "7317 ~ 8979 us (1662 us)",
+   "computing cost (no DDR)": "144 us (0.3% of model)",
+   "layer name": "/conv1/blocks.0/conv1/Greater_id_67",
+   "load cost": "0",
+   "origin ops": 0,
+   "store cost": "100 us (0.2% of model)"
+  },
+  {
+   "active period of time": "8947 ~ 11850 us (2903 us)",
+   "computing cost (no DDR)": "408 us (1.0% of model)",
+   "layer name": "/conv1/blocks.0/conv2/Mul_id_79",
+   "load cost": "1060 us (2.7% of model)",
+   "origin ops": 0,
+   "store cost": "0"
+  },
+  {
+   "active period of time": "9005 ~ 11879 us (2874 us)",
+   "computing cost (no DDR)": "1142 us (3.0% of model)",
+   "layer name": "/conv1/blocks.0/conv2/conv/Conv_id_86",
+   "load cost": "1 us (0% of model)",
+   "origin ops": 21818769408,
+   "store cost": "0"
+  },
+  {
+   "active period of time": "9007 ~ 11845 us (2838 us)",
+   "computing cost (no DDR)": "128 us (0.3% of model)",
+   "layer name": "/conv1/blocks.0/conv2/mask_conv/Conv_id_92",
+   "load cost": "0",
+   "origin ops": 21307392,
+   "store cost": "0"
+  },
+  {
+   "active period of time": "9008 ~ 11894 us (2886 us)",
+   "computing cost (no DDR)": "905 us (2.3% of model)",
+   "layer name": "/conv1/blocks.0/conv2/Mul_1_id_100",
+   "load cost": "<1 us",
+   "origin ops": 0,
+   "store cost": "0"
+  },
+  {
+   "active period of time": "9009 ~ 11856 us (2847 us)",
+   "computing cost (no DDR)": "239 us (0.6% of model)",
+   "layer name": "/conv1/blocks.0/conv2/Div_mul_id_97",
+   "load cost": "0",
+   "origin ops": 0,
+   "store cost": "0"
+  },
+  {
+   "active period of time": "9009 ~ 11856 us (2847 us)",
+   "computing cost (no DDR)": "144 us (0.3% of model)",
+   "layer name": "/conv1/blocks.0/conv2/Greater_id_103",
+   "load cost": "0",
+   "origin ops": 0,
+   "store cost": "0"
+  },
+  {
+   "active period of time": "9009 ~ 11896 us (2887 us)",
+   "computing cost (no DDR)": "222 us (0.5% of model)",
+   "layer name": "UNIT_CONV_FOR_/conv1/blocks.0/bn2/BatchNormalization_id_110",
+   "load cost": "960 us (2.5% of model)",
+   "origin ops": 75759616,
+   "store cost": "0"
+  },
+  {
+   "active period of time": "9017 ~ 11897 us (2880 us)",
+   "computing cost (no DDR)": "408 us (1.0% of model)",
+   "layer name": "/conv2/init_conv/Mul_id_116",
+   "load cost": "0",
+   "origin ops": 0,
+   "store cost": "0"
+  },
+  {
+   "active period of time": "9027 ~ 11919 us (2892 us)",
+   "computing cost (no DDR)": "750 us (1.9% of model)",
+   "layer name": "/conv2/init_conv/conv/Conv_id_122",
+   "load cost": "1 us (0% of model)",
+   "origin ops": 10909384704,
+   "store cost": "480 us (1.2% of model)"
+  },
+  {
+   "active period of time": "9033 ~ 11884 us (2851 us)",
+   "computing cost (no DDR)": "45 us (0.1% of model)",
+   "layer name": "/conv2/init_conv/mask_conv/Conv_id_128",
+   "load cost": "<1 us",
+   "origin ops": 5326848,
+   "store cost": "100 us (0.2% of model)"
+  },
+  {
+   "active period of time": "11845 ~ 11956 us (111 us)",
+   "computing cost (no DDR)": "51 us (0.1% of model)",
+   "layer name": "/conv2/init_conv/Div_mul_id_133",
+   "load cost": "60 us (0.1% of model)",
+   "origin ops": 0,
+   "store cost": "0"
+  },
+  {
+   "active period of time": "11914 ~ 13351 us (1437 us)",
+   "computing cost (no DDR)": "431 us (1.1% of model)",
+   "layer name": "/conv2/init_conv/Mul_1_id_136",
+   "load cost": "580 us (1.5% of model)",
+   "origin ops": 0,
+   "store cost": "60 us (0.1% of model)"
+  },
+  {
+   "active period of time": "11965 ~ 15970 us (4005 us)",
+   "computing cost (no DDR)": "113 us (0.2% of model)",
+   "layer name": "UNIT_CONV_FOR_/conv2/init_bn/BatchNormalization_id_146",
+   "load cost": "1 us (0% of model)",
+   "origin ops": 37879808,
+   "store cost": "480 us (1.2% of model)"
+  },
+  {
+   "active period of time": "11966 ~ 15882 us (3916 us)",
+   "computing cost (no DDR)": "22 us (0% of model)",
+   "layer name": "/conv2/init_conv/Greater_id_139",
+   "load cost": "101 us (0.2% of model)",
+   "origin ops": 0,
+   "store cost": "0"
+  },
+  {
+   "active period of time": "11971 ~ 13373 us (1402 us)",
+   "computing cost (no DDR)": "38 us (0% of model)",
+   "layer name": "/conv2/blocks.0/conv1/mask_conv/Conv_id_164",
+   "load cost": "0",
+   "origin ops": 5326848,
+   "store cost": "0"
+  },
+  {
+   "active period of time": "11972 ~ 13382 us (1410 us)",
+   "computing cost (no DDR)": "134 us (0.3% of model)",
+   "layer name": "/conv2/blocks.0/conv1/Mul_id_151",
+   "load cost": "0",
+   "origin ops": 0,
+   "store cost": "0"
+  },
+  {
+   "active period of time": "11979 ~ 13435 us (1456 us)",
+   "computing cost (no DDR)": "1029 us (2.7% of model)",
+   "layer name": "/conv2/blocks.0/conv1/conv/Conv_id_158",
+   "load cost": "2 us (0% of model)",
+   "origin ops": 21818769408,
+   "store cost": "0"
+  },
+  {
+   "active period of time": "11986 ~ 13422 us (1436 us)",
+   "computing cost (no DDR)": "84 us (0.2% of model)",
+   "layer name": "/conv2/blocks.0/conv1/Div_mul_id_169",
+   "load cost": "0",
+   "origin ops": 0,
+   "store cost": "100 us (0.2% of model)"
+  },
+  {
+   "active period of time": "11988 ~ 13448 us (1460 us)",
+   "computing cost (no DDR)": "442 us (1.1% of model)",
+   "layer name": "/conv2/blocks.0/conv1/Mul_1_id_172",
+   "load cost": "0",
+   "origin ops": 0,
+   "store cost": "480 us (1.2% of model)"
+  },
+  {
+   "active period of time": "13344 ~ 14731 us (1387 us)",
+   "computing cost (no DDR)": "113 us (0.2% of model)",
+   "layer name": "UNIT_CONV_FOR_/conv2/blocks.0/bn1/BatchNormalization_id_182",
+   "load cost": "480 us (1.2% of model)",
+   "origin ops": 37879808,
+   "store cost": "0"
+  },
+  {
+   "active period of time": "13351 ~ 14736 us (1385 us)",
+   "computing cost (no DDR)": "22 us (0% of model)",
+   "layer name": "/conv2/blocks.0/conv1/Greater_id_175",
+   "load cost": "100 us (0.2% of model)",
+   "origin ops": 0,
+   "store cost": "0"
+  },
+  {
+   "active period of time": "13441 ~ 14749 us (1308 us)",
+   "computing cost (no DDR)": "38 us (0% of model)",
+   "layer name": "/conv2/blocks.0/conv2/mask_conv/Conv_id_200",
+   "load cost": "0",
+   "origin ops": 5326848,
+   "store cost": "0"
+  },
+  {
+   "active period of time": "13441 ~ 14753 us (1312 us)",
+   "computing cost (no DDR)": "134 us (0.3% of model)",
+   "layer name": "/conv2/blocks.0/conv2/Mul_id_187",
+   "load cost": "0",
+   "origin ops": 0,
+   "store cost": "0"
+  },
+  {
+   "active period of time": "13446 ~ 14796 us (1350 us)",
+   "computing cost (no DDR)": "1029 us (2.7% of model)",
+   "layer name": "/conv2/blocks.0/conv2/conv/Conv_id_194",
+   "load cost": "2 us (0% of model)",
+   "origin ops": 21818769408,
+   "store cost": "0"
+  },
+  {
+   "active period of time": "13450 ~ 14756 us (1306 us)",
+   "computing cost (no DDR)": "84 us (0.2% of model)",
+   "layer name": "/conv2/blocks.0/conv2/Div_mul_id_205",
+   "load cost": "0",
+   "origin ops": 0,
+   "store cost": "0"
+  },
+  {
+   "active period of time": "13451 ~ 14812 us (1361 us)",
+   "computing cost (no DDR)": "113 us (0.2% of model)",
+   "layer name": "UNIT_CONV_FOR_/conv2/blocks.0/bn2/BatchNormalization_id_218",
+   "load cost": "480 us (1.2% of model)",
+   "origin ops": 37879808,
+   "store cost": "480 us (1.2% of model)"
+  },
+  {
+   "active period of time": "13452 ~ 14764 us (1312 us)",
+   "computing cost (no DDR)": "22 us (0% of model)",
+   "layer name": "/conv2/blocks.0/conv2/Greater_id_211",
+   "load cost": "0",
+   "origin ops": 0,
+   "store cost": "100 us (0.2% of model)"
+  },
+  {
+   "active period of time": "13464 ~ 14802 us (1338 us)",
+   "computing cost (no DDR)": "442 us (1.1% of model)",
+   "layer name": "/conv2/blocks.0/conv2/Mul_1_id_208",
+   "load cost": "0",
+   "origin ops": 0,
+   "store cost": "0"
+  },
+  {
+   "active period of time": "13465 ~ 15881 us (2416 us)",
+   "computing cost (no DDR)": "130 us (0.3% of model)",
+   "layer name": "/conv2/blocks.1/conv1/Mul_id_224",
+   "load cost": "565 us (1.4% of model)",
+   "origin ops": 0,
+   "store cost": "100 us (0.2% of model)"
+  },
+  {
+   "active period of time": "14766 ~ 15900 us (1134 us)",
+   "computing cost (no DDR)": "36 us (0% of model)",
+   "layer name": "/conv2/blocks.1/conv1/mask_conv/Conv_id_237",
+   "load cost": "87 us (0.2% of model)",
+   "origin ops": 5326848,
+   "store cost": "0"
+  },
+  {
+   "active period of time": "14808 ~ 15933 us (1125 us)",
+   "computing cost (no DDR)": "1006 us (2.6% of model)",
+   "layer name": "/conv2/blocks.1/conv1/conv/Conv_id_231",
+   "load cost": "2 us (0% of model)",
+   "origin ops": 21818769408,
+   "store cost": "0"
+  },
+  {
+   "active period of time": "14816 ~ 15967 us (1151 us)",
+   "computing cost (no DDR)": "108 us (0.2% of model)",
+   "layer name": "UNIT_CONV_FOR_/conv2/blocks.1/bn1/BatchNormalization_id_255",
+   "load cost": "<1 us",
+   "origin ops": 37879808,
+   "store cost": "478 us (1.2% of model)"
+  },
+  {
+   "active period of time": "14834 ~ 15912 us (1078 us)",
+   "computing cost (no DDR)": "76 us (0.1% of model)",
+   "layer name": "/conv2/blocks.1/conv1/Div_mul_id_242",
+   "load cost": "0",
+   "origin ops": 0,
+   "store cost": "87 us (0.2% of model)"
+  },
+  {
+   "active period of time": "14854 ~ 15948 us (1094 us)",
+   "computing cost (no DDR)": "430 us (1.1% of model)",
+   "layer name": "/conv2/blocks.1/conv1/Mul_1_id_245",
+   "load cost": "0",
+   "origin ops": 0,
+   "store cost": "0"
+  },
+  {
+   "active period of time": "15881 ~ 17335 us (1454 us)",
+   "computing cost (no DDR)": "22 us (0% of model)",
+   "layer name": "/conv2/blocks.1/conv1/Greater_id_248",
+   "load cost": "100 us (0.2% of model)",
+   "origin ops": 0,
+   "store cost": "0"
+  },
+  {
+   "active period of time": "15883 ~ 17363 us (1480 us)",
+   "computing cost (no DDR)": "134 us (0.3% of model)",
+   "layer name": "/conv2/blocks.1/conv2/Mul_id_260",
+   "load cost": "480 us (1.2% of model)",
+   "origin ops": 0,
+   "store cost": "0"
+  },
+  {
+   "active period of time": "15948 ~ 17350 us (1402 us)",
+   "computing cost (no DDR)": "38 us (0% of model)",
+   "layer name": "/conv2/blocks.1/conv2/mask_conv/Conv_id_273",
+   "load cost": "0",
+   "origin ops": 5326848,
+   "store cost": "0"
+  },
+  {
+   "active period of time": "15959 ~ 17393 us (1434 us)",
+   "computing cost (no DDR)": "1029 us (2.7% of model)",
+   "layer name": "/conv2/blocks.1/conv2/conv/Conv_id_267",
+   "load cost": "2 us (0% of model)",
+   "origin ops": 21818769408,
+   "store cost": "0"
+  },
+  {
+   "active period of time": "15962 ~ 17400 us (1438 us)",
+   "computing cost (no DDR)": "456 us (1.2% of model)",
+   "layer name": "/conv2/blocks.1/conv2/Mul_1_id_277",
+   "load cost": "0",
+   "origin ops": 0,
+   "store cost": "0"
+  },
+  {
+   "active period of time": "15963 ~ 17411 us (1448 us)",
+   "computing cost (no DDR)": "283 us (0.7% of model)",
+   "layer name": "UNIT_CONV_FOR_/conv2/blocks.1/bn2/BatchNormalization_id_283",
+   "load cost": "480 us (1.2% of model)",
+   "origin ops": 37879808,
+   "store cost": "480 us (1.2% of model)"
+  },
+  {
+   "active period of time": "17358 ~ 18710 us (1352 us)",
+   "computing cost (no DDR)": "465 us (1.2% of model)",
+   "layer name": "/conv3/conv3.0/Conv_id_293",
+   "load cost": "517 us (1.3% of model)",
+   "origin ops": 10909384704,
+   "store cost": "239 us (0.6% of model)"
+  },
+  {
+   "active period of time": "17411 ~ 20552 us (3141 us)",
+   "computing cost (no DDR)": "967 us (2.5% of model)",
+   "layer name": "/conv3/conv3.2/conv2/Conv_id_309",
+   "load cost": "559 us (1.4% of model)",
+   "origin ops": 21818769408,
+   "store cost": "239 us (0.6% of model)"
+  },
+  {
+   "active period of time": "17423 ~ 18789 us (1366 us)",
+   "computing cost (no DDR)": "894 us (2.3% of model)",
+   "layer name": "/conv3/conv3.2/conv1/Conv_id_301",
+   "load cost": "4 us (0% of model)",
+   "origin ops": 21818769408,
+   "store cost": "239 us (0.6% of model)"
+  },
+  {
+   "active period of time": "18728 ~ 20631 us (1903 us)",
+   "computing cost (no DDR)": "894 us (2.3% of model)",
+   "layer name": "/conv3/conv3.3/conv1/Conv_id_320",
+   "load cost": "4 us (0% of model)",
+   "origin ops": 21818769408,
+   "store cost": "239 us (0.6% of model)"
+  },
+  {
+   "active period of time": "20425 ~ 22001 us (1576 us)",
+   "computing cost (no DDR)": "945 us (2.4% of model)",
+   "layer name": "/conv3/conv3.3/conv2/Conv_id_328",
+   "load cost": "518 us (1.3% of model)",
+   "origin ops": 21818769408,
+   "store cost": "0"
+  },
+  {
+   "active period of time": "20585 ~ 22027 us (1442 us)",
+   "computing cost (no DDR)": "477 us (1.2% of model)",
+   "layer name": "/conv4/conv4.0/Conv_id_338",
+   "load cost": "8 us (0% of model)",
+   "origin ops": 10909384704,
+   "store cost": "120 us (0.3% of model)"
+  },
+  {
+   "active period of time": "21962 ~ 23006 us (1044 us)",
+   "computing cost (no DDR)": "945 us (2.4% of model)",
+   "layer name": "/conv4/conv4.2/conv1/Conv_id_346",
+   "load cost": "152 us (0.4% of model)",
+   "origin ops": 21818769408,
+   "store cost": "119 us (0.3% of model)"
+  },
+  {
+   "active period of time": "22555 ~ 24764 us (2209 us)",
+   "computing cost (no DDR)": "995 us (2.6% of model)",
+   "layer name": "/conv4/conv4.2/conv2/Conv_id_354",
+   "load cost": "293 us (0.7% of model)",
+   "origin ops": 21818769408,
+   "store cost": "120 us (0.3% of model)"
+  },
+  {
+   "active period of time": "23016 ~ 24968 us (1952 us)",
+   "computing cost (no DDR)": "995 us (2.6% of model)",
+   "layer name": "/conv4/conv4.3/conv1/Conv_id_365",
+   "load cost": "15 us (0% of model)",
+   "origin ops": 21818769408,
+   "store cost": "120 us (0.3% of model)"
+  },
+  {
+   "active period of time": "24726 ~ 25983 us (1257 us)",
+   "computing cost (no DDR)": "995 us (2.6% of model)",
+   "layer name": "/conv4/conv4.3/conv2/Conv_id_373",
+   "load cost": "293 us (0.7% of model)",
+   "origin ops": 21818769408,
+   "store cost": "120 us (0.3% of model)"
+  },
+  {
+   "active period of time": "25050 ~ 26280 us (1230 us)",
+   "computing cost (no DDR)": "311 us (0.8% of model)",
+   "layer name": "/conv5/conv5.0/Conv_id_383",
+   "load cost": "150 us (0.3% of model)",
+   "origin ops": 5454692352,
+   "store cost": "127 us (0.3% of model)"
+  },
+  {
+   "active period of time": "26182 ~ 26536 us (354 us)",
+   "computing cost (no DDR)": "242 us (0.6% of model)",
+   "layer name": "/conv5/conv5.2/conv1/Conv_id_391",
+   "load cost": "15 us (0% of model)",
+   "origin ops": 5454692352,
+   "store cost": "0"
+  },
+  {
+   "active period of time": "26280 ~ 26793 us (513 us)",
+   "computing cost (no DDR)": "242 us (0.6% of model)",
+   "layer name": "/conv5/conv5.2/conv2/Conv_id_399",
+   "load cost": "15 us (0% of model)",
+   "origin ops": 5454692352,
+   "store cost": "0"
+  },
+  {
+   "active period of time": "26537 ~ 27049 us (512 us)",
+   "computing cost (no DDR)": "242 us (0.6% of model)",
+   "layer name": "/conv5/conv5.3/conv1/Conv_id_408",
+   "load cost": "15 us (0% of model)",
+   "origin ops": 5454692352,
+   "store cost": "0"
+  },
+  {
+   "active period of time": "26793 ~ 27306 us (513 us)",
+   "computing cost (no DDR)": "242 us (0.6% of model)",
+   "layer name": "/conv5/conv5.3/conv2/Conv_id_416",
+   "load cost": "15 us (0% of model)",
+   "origin ops": 5454692352,
+   "store cost": "0"
+  },
+  {
+   "active period of time": "27050 ~ 27562 us (512 us)",
+   "computing cost (no DDR)": "242 us (0.6% of model)",
+   "layer name": "/bev_blocks.1/bev_blocks.1.1/Conv_id_433",
+   "load cost": "15 us (0% of model)",
+   "origin ops": 5454692352,
+   "store cost": "0"
+  },
+  {
+   "active period of time": "27306 ~ 27819 us (513 us)",
+   "computing cost (no DDR)": "242 us (0.6% of model)",
+   "layer name": "/bev_blocks.1/bev_blocks.1.3/Conv_id_441",
+   "load cost": "15 us (0% of model)",
+   "origin ops": 5454692352,
+   "store cost": "0"
+  },
+  {
+   "active period of time": "27563 ~ 28075 us (512 us)",
+   "computing cost (no DDR)": "242 us (0.6% of model)",
+   "layer name": "/bev_blocks.1/bev_blocks.1.5/Conv_id_449",
+   "load cost": "15 us (0% of model)",
+   "origin ops": 5454692352,
+   "store cost": "0"
+  },
+  {
+   "active period of time": "27819 ~ 28332 us (513 us)",
+   "computing cost (no DDR)": "242 us (0.6% of model)",
+   "layer name": "/bev_blocks.1/bev_blocks.1.7/Conv_id_457",
+   "load cost": "15 us (0% of model)",
+   "origin ops": 5454692352,
+   "store cost": "0"
+  },
+  {
+   "active period of time": "28076 ~ 28588 us (512 us)",
+   "computing cost (no DDR)": "242 us (0.6% of model)",
+   "layer name": "/bev_blocks.1/bev_blocks.1.9/Conv_id_465",
+   "load cost": "15 us (0% of model)",
+   "origin ops": 5454692352,
+   "store cost": "0"
+  },
+  {
+   "active period of time": "28332 ~ 28844 us (512 us)",
+   "computing cost (no DDR)": "242 us (0.6% of model)",
+   "layer name": "/bev_blocks.1/bev_blocks.1.11/Conv_id_473",
+   "load cost": "15 us (0% of model)",
+   "origin ops": 5454692352,
+   "store cost": "0"
+  },
+  {
+   "active period of time": "28588 ~ 28968 us (380 us)",
+   "computing cost (no DDR)": "145 us (0.3% of model)",
+   "layer name": "/bev_deblocks.1/bev_deblocks.1.0/ConvTranspose_id_482",
+   "load cost": "4 us (0% of model)",
+   "origin ops": 1212153856,
+   "store cost": "0"
+  },
+  {
+   "active period of time": "28593 ~ 28991 us (398 us)",
+   "computing cost (no DDR)": "53 us (0.1% of model)",
+   "layer name": "/bev_deblocks.0/bev_deblocks.0.0/ConvTranspose_id_424",
+   "load cost": "121 us (0.3% of model)",
+   "origin ops": 1212153856,
+   "store cost": "0"
+  },
+  {
+   "active period of time": "28874 ~ 29031 us (157 us)",
+   "computing cost (no DDR)": "18 us (0% of model)",
+   "layer name": "/Concat_id_487",
+   "load cost": "0",
+   "origin ops": 0,
+   "store cost": "119 us (0.3% of model)"
+  },
+  {
+   "active period of time": "28987 ~ 29992 us (1005 us)",
+   "computing cost (no DDR)": "945 us (2.4% of model)",
+   "layer name": "/bev_blocks.0/bev_blocks.0.1/Conv_id_494",
+   "load cost": "152 us (0.4% of model)",
+   "origin ops": 21818769408,
+   "store cost": "119 us (0.3% of model)"
+  },
+  {
+   "active period of time": "29858 ~ 30945 us (1087 us)",
+   "computing cost (no DDR)": "945 us (2.4% of model)",
+   "layer name": "/bev_blocks.0/bev_blocks.0.3/Conv_id_502",
+   "load cost": "152 us (0.4% of model)",
+   "origin ops": 21818769408,
+   "store cost": "119 us (0.3% of model)"
+  },
+  {
+   "active period of time": "30810 ~ 31897 us (1087 us)",
+   "computing cost (no DDR)": "945 us (2.4% of model)",
+   "layer name": "/bev_blocks.0/bev_blocks.0.5/Conv_id_510",
+   "load cost": "152 us (0.4% of model)",
+   "origin ops": 21818769408,
+   "store cost": "119 us (0.3% of model)"
+  },
+  {
+   "active period of time": "31763 ~ 32850 us (1087 us)",
+   "computing cost (no DDR)": "945 us (2.4% of model)",
+   "layer name": "/bev_blocks.0/bev_blocks.0.7/Conv_id_518",
+   "load cost": "152 us (0.4% of model)",
+   "origin ops": 21818769408,
+   "store cost": "119 us (0.3% of model)"
+  },
+  {
+   "active period of time": "32715 ~ 33802 us (1087 us)",
+   "computing cost (no DDR)": "945 us (2.4% of model)",
+   "layer name": "/bev_blocks.0/bev_blocks.0.9/Conv_id_526",
+   "load cost": "152 us (0.4% of model)",
+   "origin ops": 21818769408,
+   "store cost": "119 us (0.3% of model)"
+  },
+  {
+   "active period of time": "33352 ~ 35044 us (1692 us)",
+   "computing cost (no DDR)": "995 us (2.6% of model)",
+   "layer name": "/bev_blocks.0/bev_blocks.0.11/Conv_id_534",
+   "load cost": "173 us (0.4% of model)",
+   "origin ops": 21818769408,
+   "store cost": "0"
+  },
+  {
+   "active period of time": "33802 ~ 35092 us (1290 us)",
+   "computing cost (no DDR)": "270 us (0.7% of model)",
+   "layer name": "/shared_conv/shared_conv.0/Conv_id_542",
+   "load cost": "4 us (0% of model)",
+   "origin ops": 5454692352,
+   "store cost": "35 us (0% of model)"
+  },
+  {
+   "active period of time": "33821 ~ 35101 us (1280 us)",
+   "computing cost (no DDR)": "69 us (0.1% of model)",
+   "layer name": "/heads_list.0/center/center.0/center.0.0/Conv_id_551",
+   "load cost": "2 us (0% of model)",
+   "origin ops": 1363673088,
+   "store cost": "0"
+  },
+  {
+   "active period of time": "33890 ~ 35105 us (1215 us)",
+   "computing cost (no DDR)": "21 us (0% of model)",
+   "layer name": "/heads_list.0/center/center.1/Conv_id_559",
+   "load cost": "1 us (0% of model)",
+   "origin ops": 42614784,
+   "store cost": "0"
+  },
+  {
+   "active period of time": "34301 ~ 35658 us (1357 us)",
+   "computing cost (no DDR)": "27 us (0% of model)",
+   "layer name": "/Concat_1_id_636",
+   "load cost": "27 us (0% of model)",
+   "origin ops": 0,
+   "store cost": "34 us (0% of model)"
+  },
+  {
+   "active period of time": "34983 ~ 35311 us (328 us)",
+   "computing cost (no DDR)": "65 us (0.1% of model)",
+   "layer name": "/heads_list.0/center_z/center_z.0/center_z.0.0/Conv_id_566",
+   "load cost": "66 us (0.1% of model)",
+   "origin ops": 1363673088,
+   "store cost": "0"
+  },
+  {
+   "active period of time": "35106 ~ 35326 us (220 us)",
+   "computing cost (no DDR)": "65 us (0.1% of model)",
+   "layer name": "/heads_list.0/dim/dim.0/dim.0.0/Conv_id_581",
+   "load cost": "36 us (0% of model)",
+   "origin ops": 1363673088,
+   "store cost": "0"
+  },
+  {
+   "active period of time": "35114 ~ 35340 us (226 us)",
+   "computing cost (no DDR)": "65 us (0.1% of model)",
+   "layer name": "/heads_list.0/rot/rot.0/rot.0.0/Conv_id_596",
+   "load cost": "36 us (0% of model)",
+   "origin ops": 1363673088,
+   "store cost": "0"
+  },
+  {
+   "active period of time": "35128 ~ 35318 us (190 us)",
+   "computing cost (no DDR)": "19 us (0% of model)",
+   "layer name": "/heads_list.0/center_z/center_z.1/Conv_id_574",
+   "load cost": "1 us (0% of model)",
+   "origin ops": 21307392,
+   "store cost": "0"
+  },
+  {
+   "active period of time": "35136 ~ 35333 us (197 us)",
+   "computing cost (no DDR)": "20 us (0% of model)",
+   "layer name": "/heads_list.0/dim/dim.1/Conv_id_589",
+   "load cost": "1 us (0% of model)",
+   "origin ops": 63922176,
+   "store cost": "0"
+  },
+  {
+   "active period of time": "35143 ~ 35347 us (204 us)",
+   "computing cost (no DDR)": "19 us (0% of model)",
+   "layer name": "/heads_list.0/rot/rot.1/Conv_id_604",
+   "load cost": "1 us (0% of model)",
+   "origin ops": 42614784,
+   "store cost": "0"
+  },
+  {
+   "active period of time": "35267 ~ 35437 us (170 us)",
+   "computing cost (no DDR)": "57 us (0.1% of model)",
+   "layer name": "/heads_list.0/vel/vel.0/vel.0.0/Conv_id_611",
+   "load cost": "2 us (0% of model)",
+   "origin ops": 1363673088,
+   "store cost": "0"
+  },
+  {
+   "active period of time": "35301 ~ 35516 us (215 us)",
+   "computing cost (no DDR)": "57 us (0.1% of model)",
+   "layer name": "/heads_list.0/hm/hm.0/hm.0.0/Conv_id_626",
+   "load cost": "2 us (0% of model)",
+   "origin ops": 1363673088,
+   "store cost": "0"
+  },
+  {
+   "active period of time": "35302 ~ 35595 us (293 us)",
+   "computing cost (no DDR)": "57 us (0.1% of model)",
+   "layer name": "/heads_list.1/center/center.0/center.0.0/Conv_id_642",
+   "load cost": "2 us (0% of model)",
+   "origin ops": 1363673088,
+   "store cost": "0"
+  },
+  {
+   "active period of time": "35304 ~ 35645 us (341 us)",
+   "computing cost (no DDR)": "57 us (0.1% of model)",
+   "layer name": "/heads_list.1/center_z/center_z.0/center_z.0.0/Conv_id_657",
+   "load cost": "2 us (0% of model)",
+   "origin ops": 1363673088,
+   "store cost": "0"
+  },
+  {
+   "active period of time": "35312 ~ 35456 us (144 us)",
+   "computing cost (no DDR)": "18 us (0% of model)",
+   "layer name": "/heads_list.0/vel/vel.1/Conv_id_619",
+   "load cost": "1 us (0% of model)",
+   "origin ops": 42614784,
+   "store cost": "0"
+  },
+  {
+   "active period of time": "35313 ~ 35535 us (222 us)",
+   "computing cost (no DDR)": "18 us (0% of model)",
+   "layer name": "/heads_list.0/hm/hm.1/Conv_id_634",
+   "load cost": "1 us (0% of model)",
+   "origin ops": 21307392,
+   "store cost": "0"
+  },
+  {
+   "active period of time": "35314 ~ 35615 us (301 us)",
+   "computing cost (no DDR)": "18 us (0% of model)",
+   "layer name": "/heads_list.1/center/center.1/Conv_id_650",
+   "load cost": "1 us (0% of model)",
+   "origin ops": 42614784,
+   "store cost": "0"
+  },
+  {
+   "active period of time": "35315 ~ 35666 us (351 us)",
+   "computing cost (no DDR)": "18 us (0% of model)",
+   "layer name": "/heads_list.1/center_z/center_z.1/Conv_id_665",
+   "load cost": "1 us (0% of model)",
+   "origin ops": 21307392,
+   "store cost": "0"
+  },
+  {
+   "active period of time": "35605 ~ 36140 us (535 us)",
+   "computing cost (no DDR)": "27 us (0% of model)",
+   "layer name": "/Concat_2_id_727",
+   "load cost": "38 us (0.1% of model)",
+   "origin ops": 0,
+   "store cost": "44 us (0.1% of model)"
+  },
+  {
+   "active period of time": "35605 ~ 35806 us (201 us)",
+   "computing cost (no DDR)": "65 us (0.1% of model)",
+   "layer name": "/heads_list.1/dim/dim.0/dim.0.0/Conv_id_672",
+   "load cost": "2 us (0% of model)",
+   "origin ops": 1363673088,
+   "store cost": "0"
+  },
+  {
+   "active period of time": "35666 ~ 35821 us (155 us)",
+   "computing cost (no DDR)": "65 us (0.1% of model)",
+   "layer name": "/heads_list.1/rot/rot.0/rot.0.0/Conv_id_687",
+   "load cost": "2 us (0% of model)",
+   "origin ops": 1363673088,
+   "store cost": "0"
+  },
+  {
+   "active period of time": "35668 ~ 35814 us (146 us)",
+   "computing cost (no DDR)": "20 us (0% of model)",
+   "layer name": "/heads_list.1/dim/dim.1/Conv_id_680",
+   "load cost": "1 us (0% of model)",
+   "origin ops": 63922176,
+   "store cost": "0"
+  },
+  {
+   "active period of time": "35670 ~ 35828 us (158 us)",
+   "computing cost (no DDR)": "19 us (0% of model)",
+   "layer name": "/heads_list.1/rot/rot.1/Conv_id_695",
+   "load cost": "1 us (0% of model)",
+   "origin ops": 42614784,
+   "store cost": "0"
+  },
+  {
+   "active period of time": "35671 ~ 35918 us (247 us)",
+   "computing cost (no DDR)": "57 us (0.1% of model)",
+   "layer name": "/heads_list.1/vel/vel.0/vel.0.0/Conv_id_702",
+   "load cost": "2 us (0% of model)",
+   "origin ops": 1363673088,
+   "store cost": "0"
+  },
+  {
+   "active period of time": "35673 ~ 35997 us (324 us)",
+   "computing cost (no DDR)": "57 us (0.1% of model)",
+   "layer name": "/heads_list.1/hm/hm.0/hm.0.0/Conv_id_717",
+   "load cost": "2 us (0% of model)",
+   "origin ops": 1363673088,
+   "store cost": "0"
+  },
+  {
+   "active period of time": "35675 ~ 36076 us (401 us)",
+   "computing cost (no DDR)": "57 us (0.1% of model)",
+   "layer name": "/heads_list.2/center/center.0/center.0.0/Conv_id_733",
+   "load cost": "2 us (0% of model)",
+   "origin ops": 1363673088,
+   "store cost": "0"
+  },
+  {
+   "active period of time": "35677 ~ 36125 us (448 us)",
+   "computing cost (no DDR)": "57 us (0.1% of model)",
+   "layer name": "/heads_list.2/center_z/center_z.0/center_z.0.0/Conv_id_748",
+   "load cost": "2 us (0% of model)",
+   "origin ops": 1363673088,
+   "store cost": "0"
+  },
+  {
+   "active period of time": "35679 ~ 35937 us (258 us)",
+   "computing cost (no DDR)": "18 us (0% of model)",
+   "layer name": "/heads_list.1/vel/vel.1/Conv_id_710",
+   "load cost": "1 us (0% of model)",
+   "origin ops": 42614784,
+   "store cost": "0"
+  },
+  {
+   "active period of time": "35680 ~ 36016 us (336 us)",
+   "computing cost (no DDR)": "18 us (0% of model)",
+   "layer name": "/heads_list.1/hm/hm.1/Conv_id_725",
+   "load cost": "1 us (0% of model)",
+   "origin ops": 42614784,
+   "store cost": "0"
+  },
+  {
+   "active period of time": "35681 ~ 36095 us (414 us)",
+   "computing cost (no DDR)": "18 us (0% of model)",
+   "layer name": "/heads_list.2/center/center.1/Conv_id_741",
+   "load cost": "1 us (0% of model)",
+   "origin ops": 42614784,
+   "store cost": "0"
+  },
+  {
+   "active period of time": "35682 ~ 36144 us (462 us)",
+   "computing cost (no DDR)": "18 us (0% of model)",
+   "layer name": "/heads_list.2/center_z/center_z.1/Conv_id_756",
+   "load cost": "1 us (0% of model)",
+   "origin ops": 21307392,
+   "store cost": "0"
+  },
+  {
+   "active period of time": "36076 ~ 36285 us (209 us)",
+   "computing cost (no DDR)": "65 us (0.1% of model)",
+   "layer name": "/heads_list.2/dim/dim.0/dim.0.0/Conv_id_763",
+   "load cost": "2 us (0% of model)",
+   "origin ops": 1363673088,
+   "store cost": "0"
+  },
+  {
+   "active period of time": "36086 ~ 36596 us (510 us)",
+   "computing cost (no DDR)": "27 us (0% of model)",
+   "layer name": "/Concat_3_id_818",
+   "load cost": "38 us (0.1% of model)",
+   "origin ops": 0,
+   "store cost": "44 us (0.1% of model)"
+  },
+  {
+   "active period of time": "36144 ~ 36300 us (156 us)",
+   "computing cost (no DDR)": "65 us (0.1% of model)",
+   "layer name": "/heads_list.2/rot/rot.0/rot.0.0/Conv_id_778",
+   "load cost": "2 us (0% of model)",
+   "origin ops": 1363673088,
+   "store cost": "0"
+  },
+  {
+   "active period of time": "36147 ~ 36292 us (145 us)",
+   "computing cost (no DDR)": "20 us (0% of model)",
+   "layer name": "/heads_list.2/dim/dim.1/Conv_id_771",
+   "load cost": "1 us (0% of model)",
+   "origin ops": 63922176,
+   "store cost": "0"
+  },
+  {
+   "active period of time": "36148 ~ 36307 us (159 us)",
+   "computing cost (no DDR)": "19 us (0% of model)",
+   "layer name": "/heads_list.2/rot/rot.1/Conv_id_786",
+   "load cost": "1 us (0% of model)",
+   "origin ops": 42614784,
+   "store cost": "0"
+  },
+  {
+   "active period of time": "36149 ~ 36397 us (248 us)",
+   "computing cost (no DDR)": "57 us (0.1% of model)",
+   "layer name": "/heads_list.2/vel/vel.0/vel.0.0/Conv_id_793",
+   "load cost": "2 us (0% of model)",
+   "origin ops": 1363673088,
+   "store cost": "0"
+  },
+  {
+   "active period of time": "36151 ~ 36476 us (325 us)",
+   "computing cost (no DDR)": "57 us (0.1% of model)",
+   "layer name": "/heads_list.2/hm/hm.0/hm.0.0/Conv_id_808",
+   "load cost": "2 us (0% of model)",
+   "origin ops": 1363673088,
+   "store cost": "0"
+  },
+  {
+   "active period of time": "36153 ~ 36555 us (402 us)",
+   "computing cost (no DDR)": "57 us (0.1% of model)",
+   "layer name": "/heads_list.3/center/center.0/center.0.0/Conv_id_824",
+   "load cost": "2 us (0% of model)",
+   "origin ops": 1363673088,
+   "store cost": "0"
+  },
+  {
+   "active period of time": "36155 ~ 36604 us (449 us)",
+   "computing cost (no DDR)": "57 us (0.1% of model)",
+   "layer name": "/heads_list.3/center_z/center_z.0/center_z.0.0/Conv_id_839",
+   "load cost": "2 us (0% of model)",
+   "origin ops": 1363673088,
+   "store cost": "0"
+  },
+  {
+   "active period of time": "36157 ~ 36416 us (259 us)",
+   "computing cost (no DDR)": "18 us (0% of model)",
+   "layer name": "/heads_list.2/vel/vel.1/Conv_id_801",
+   "load cost": "1 us (0% of model)",
+   "origin ops": 42614784,
+   "store cost": "0"
+  },
+  {
+   "active period of time": "36158 ~ 36495 us (337 us)",
+   "computing cost (no DDR)": "18 us (0% of model)",
+   "layer name": "/heads_list.2/hm/hm.1/Conv_id_816",
+   "load cost": "1 us (0% of model)",
+   "origin ops": 42614784,
+   "store cost": "0"
+  },
+  {
+   "active period of time": "36160 ~ 36574 us (414 us)",
+   "computing cost (no DDR)": "18 us (0% of model)",
+   "layer name": "/heads_list.3/center/center.1/Conv_id_832",
+   "load cost": "1 us (0% of model)",
+   "origin ops": 42614784,
+   "store cost": "0"
+  },
+  {
+   "active period of time": "36161 ~ 36624 us (463 us)",
+   "computing cost (no DDR)": "18 us (0% of model)",
+   "layer name": "/heads_list.3/center_z/center_z.1/Conv_id_847",
+   "load cost": "1 us (0% of model)",
+   "origin ops": 21307392,
+   "store cost": "0"
+  },
+  {
+   "active period of time": "36555 ~ 36830 us (275 us)",
+   "computing cost (no DDR)": "65 us (0.1% of model)",
+   "layer name": "/heads_list.3/dim/dim.0/dim.0.0/Conv_id_854",
+   "load cost": "2 us (0% of model)",
+   "origin ops": 1363673088,
+   "store cost": "0"
+  },
+  {
+   "active period of time": "36564 ~ 37098 us (534 us)",
+   "computing cost (no DDR)": "26 us (0% of model)",
+   "layer name": "/Concat_4_id_910",
+   "load cost": "41 us (0.1% of model)",
+   "origin ops": 0,
+   "store cost": "49 us (0.1% of model)"
+  },
+  {
+   "active period of time": "36624 ~ 36845 us (221 us)",
+   "computing cost (no DDR)": "65 us (0.1% of model)",
+   "layer name": "/heads_list.3/rot/rot.0/rot.0.0/Conv_id_869",
+   "load cost": "2 us (0% of model)",
+   "origin ops": 1363673088,
+   "store cost": "0"
+  },
+  {
+   "active period of time": "36626 ~ 36859 us (233 us)",
+   "computing cost (no DDR)": "65 us (0.1% of model)",
+   "layer name": "/heads_list.3/vel/vel.0/vel.0.0/Conv_id_884",
+   "load cost": "2 us (0% of model)",
+   "origin ops": 1363673088,
+   "store cost": "0"
+  },
+  {
+   "active period of time": "36628 ~ 36837 us (209 us)",
+   "computing cost (no DDR)": "20 us (0% of model)",
+   "layer name": "/heads_list.3/dim/dim.1/Conv_id_862",
+   "load cost": "1 us (0% of model)",
+   "origin ops": 63922176,
+   "store cost": "0"
+  },
+  {
+   "active period of time": "36630 ~ 36852 us (222 us)",
+   "computing cost (no DDR)": "19 us (0% of model)",
+   "layer name": "/heads_list.3/rot/rot.1/Conv_id_877",
+   "load cost": "1 us (0% of model)",
+   "origin ops": 42614784,
+   "store cost": "0"
+  },
+  {
+   "active period of time": "36631 ~ 36866 us (235 us)",
+   "computing cost (no DDR)": "19 us (0% of model)",
+   "layer name": "/heads_list.3/vel/vel.1/Conv_id_892",
+   "load cost": "1 us (0% of model)",
+   "origin ops": 42614784,
+   "store cost": "0"
+  },
+  {
+   "active period of time": "36632 ~ 36956 us (324 us)",
+   "computing cost (no DDR)": "57 us (0.1% of model)",
+   "layer name": "/heads_list.3/hm/hm.0/hm.0.0/Conv_id_899",
+   "load cost": "2 us (0% of model)",
+   "origin ops": 1363673088,
+   "store cost": "0"
+  },
+  {
+   "active period of time": "36819 ~ 37035 us (216 us)",
+   "computing cost (no DDR)": "57 us (0.1% of model)",
+   "layer name": "/heads_list.4/center/center.0/center.0.0/Conv_id_916",
+   "load cost": "2 us (0% of model)",
+   "origin ops": 1363673088,
+   "store cost": "0"
+  },
+  {
+   "active period of time": "36821 ~ 37084 us (263 us)",
+   "computing cost (no DDR)": "57 us (0.1% of model)",
+   "layer name": "/heads_list.4/center_z/center_z.0/center_z.0.0/Conv_id_931",
+   "load cost": "2 us (0% of model)",
+   "origin ops": 1363673088,
+   "store cost": "0"
+  },
+  {
+   "active period of time": "36823 ~ 36975 us (152 us)",
+   "computing cost (no DDR)": "18 us (0% of model)",
+   "layer name": "/heads_list.3/hm/hm.1/Conv_id_908",
+   "load cost": "1 us (0% of model)",
+   "origin ops": 21307392,
+   "store cost": "0"
+  },
+  {
+   "active period of time": "36824 ~ 37054 us (230 us)",
+   "computing cost (no DDR)": "18 us (0% of model)",
+   "layer name": "/heads_list.4/center/center.1/Conv_id_924",
+   "load cost": "1 us (0% of model)",
+   "origin ops": 42614784,
+   "store cost": "0"
+  },
+  {
+   "active period of time": "36830 ~ 37103 us (273 us)",
+   "computing cost (no DDR)": "18 us (0% of model)",
+   "layer name": "/heads_list.4/center_z/center_z.1/Conv_id_939",
+   "load cost": "1 us (0% of model)",
+   "origin ops": 21307392,
+   "store cost": "0"
+  },
+  {
+   "active period of time": "37024 ~ 37244 us (220 us)",
+   "computing cost (no DDR)": "65 us (0.1% of model)",
+   "layer name": "/heads_list.4/dim/dim.0/dim.0.0/Conv_id_946",
+   "load cost": "2 us (0% of model)",
+   "origin ops": 1363673088,
+   "store cost": "0"
+  },
+  {
+   "active period of time": "37045 ~ 37555 us (510 us)",
+   "computing cost (no DDR)": "27 us (0% of model)",
+   "layer name": "/Concat_5_id_1001",
+   "load cost": "38 us (0.1% of model)",
+   "origin ops": 0,
+   "store cost": "44 us (0.1% of model)"
+  },
+  {
+   "active period of time": "37054 ~ 37259 us (205 us)",
+   "computing cost (no DDR)": "65 us (0.1% of model)",
+   "layer name": "/heads_list.4/rot/rot.0/rot.0.0/Conv_id_961",
+   "load cost": "2 us (0% of model)",
+   "origin ops": 1363673088,
+   "store cost": "0"
+  },
+  {
+   "active period of time": "37085 ~ 37251 us (166 us)",
+   "computing cost (no DDR)": "20 us (0% of model)",
+   "layer name": "/heads_list.4/dim/dim.1/Conv_id_954",
+   "load cost": "1 us (0% of model)",
+   "origin ops": 63922176,
+   "store cost": "0"
+  },
+  {
+   "active period of time": "37086 ~ 37266 us (180 us)",
+   "computing cost (no DDR)": "19 us (0% of model)",
+   "layer name": "/heads_list.4/rot/rot.1/Conv_id_969",
+   "load cost": "1 us (0% of model)",
+   "origin ops": 42614784,
+   "store cost": "0"
+  },
+  {
+   "active period of time": "37105 ~ 37356 us (251 us)",
+   "computing cost (no DDR)": "57 us (0.1% of model)",
+   "layer name": "/heads_list.4/vel/vel.0/vel.0.0/Conv_id_976",
+   "load cost": "2 us (0% of model)",
+   "origin ops": 1363673088,
+   "store cost": "0"
+  },
+  {
+   "active period of time": "37107 ~ 37435 us (328 us)",
+   "computing cost (no DDR)": "57 us (0.1% of model)",
+   "layer name": "/heads_list.4/hm/hm.0/hm.0.0/Conv_id_991",
+   "load cost": "2 us (0% of model)",
+   "origin ops": 1363673088,
+   "store cost": "0"
+  },
+  {
+   "active period of time": "37109 ~ 37514 us (405 us)",
+   "computing cost (no DDR)": "57 us (0.1% of model)",
+   "layer name": "/heads_list.5/center/center.0/center.0.0/Conv_id_1007",
+   "load cost": "2 us (0% of model)",
+   "origin ops": 1363673088,
+   "store cost": "0"
+  },
+  {
+   "active period of time": "37111 ~ 37563 us (452 us)",
+   "computing cost (no DDR)": "57 us (0.1% of model)",
+   "layer name": "/heads_list.5/center_z/center_z.0/center_z.0.0/Conv_id_1022",
+   "load cost": "2 us (0% of model)",
+   "origin ops": 1363673088,
+   "store cost": "0"
+  },
+  {
+   "active period of time": "37113 ~ 37375 us (262 us)",
+   "computing cost (no DDR)": "18 us (0% of model)",
+   "layer name": "/heads_list.4/vel/vel.1/Conv_id_984",
+   "load cost": "1 us (0% of model)",
+   "origin ops": 42614784,
+   "store cost": "0"
+  },
+  {
+   "active period of time": "37116 ~ 37454 us (338 us)",
+   "computing cost (no DDR)": "18 us (0% of model)",
+   "layer name": "/heads_list.4/hm/hm.1/Conv_id_999",
+   "load cost": "1 us (0% of model)",
+   "origin ops": 42614784,
+   "store cost": "0"
+  },
+  {
+   "active period of time": "37117 ~ 37533 us (416 us)",
+   "computing cost (no DDR)": "18 us (0% of model)",
+   "layer name": "/heads_list.5/center/center.1/Conv_id_1015",
+   "load cost": "1 us (0% of model)",
+   "origin ops": 42614784,
+   "store cost": "0"
+  },
+  {
+   "active period of time": "37118 ~ 37582 us (464 us)",
+   "computing cost (no DDR)": "18 us (0% of model)",
+   "layer name": "/heads_list.5/center_z/center_z.1/Conv_id_1030",
+   "load cost": "1 us (0% of model)",
+   "origin ops": 21307392,
+   "store cost": "0"
+  },
+  {
+   "active period of time": "37514 ~ 37789 us (275 us)",
+   "computing cost (no DDR)": "65 us (0.1% of model)",
+   "layer name": "/heads_list.5/dim/dim.0/dim.0.0/Conv_id_1037",
+   "load cost": "2 us (0% of model)",
+   "origin ops": 1363673088,
+   "store cost": "0"
+  },
+  {
+   "active period of time": "37516 ~ 37804 us (288 us)",
+   "computing cost (no DDR)": "65 us (0.1% of model)",
+   "layer name": "/heads_list.5/rot/rot.0/rot.0.0/Conv_id_1052",
+   "load cost": "2 us (0% of model)",
+   "origin ops": 1363673088,
+   "store cost": "0"
+  },
+  {
+   "active period of time": "37518 ~ 37818 us (300 us)",
+   "computing cost (no DDR)": "65 us (0.1% of model)",
+   "layer name": "/heads_list.5/vel/vel.0/vel.0.0/Conv_id_1067",
+   "load cost": "2 us (0% of model)",
+   "origin ops": 1363673088,
+   "store cost": "0"
+  },
+  {
+   "active period of time": "37520 ~ 37796 us (276 us)",
+   "computing cost (no DDR)": "20 us (0% of model)",
+   "layer name": "/heads_list.5/dim/dim.1/Conv_id_1045",
+   "load cost": "1 us (0% of model)",
+   "origin ops": 63922176,
+   "store cost": "0"
+  },
+  {
+   "active period of time": "37523 ~ 37924 us (401 us)",
+   "computing cost (no DDR)": "39 us (0.1% of model)",
+   "layer name": "/Concat_6_id_1092",
+   "load cost": "70 us (0.1% of model)",
+   "origin ops": 0,
+   "store cost": "57 us (0.1% of model)"
+  },
+  {
+   "active period of time": "37524 ~ 37811 us (287 us)",
+   "computing cost (no DDR)": "19 us (0% of model)",
+   "layer name": "/heads_list.5/rot/rot.1/Conv_id_1060",
+   "load cost": "1 us (0% of model)",
+   "origin ops": 42614784,
+   "store cost": "0"
+  },
+  {
+   "active period of time": "37525 ~ 37825 us (300 us)",
+   "computing cost (no DDR)": "19 us (0% of model)",
+   "layer name": "/heads_list.5/vel/vel.1/Conv_id_1075",
+   "load cost": "1 us (0% of model)",
+   "origin ops": 42614784,
+   "store cost": "0"
+  },
+  {
+   "active period of time": "37583 ~ 37908 us (325 us)",
+   "computing cost (no DDR)": "69 us (0.1% of model)",
+   "layer name": "/heads_list.5/hm/hm.0/hm.0.0/Conv_id_1082",
+   "load cost": "2 us (0% of model)",
+   "origin ops": 1363673088,
+   "store cost": "0"
+  },
+  {
+   "active period of time": "37585 ~ 37911 us (326 us)",
+   "computing cost (no DDR)": "21 us (0% of model)",
+   "layer name": "/heads_list.5/hm/hm.1/Conv_id_1090",
+   "load cost": "1 us (0% of model)",
+   "origin ops": 42614784,
+   "store cost": "0"
+  }
+ ],
+ "model info": {
+  "BPU core number": 1,
+  "BPU march": "nash-e",
+  "compiling HBDK version": "4.2.11",
+  "compiling options": "{\"march\": \"nash-e\", \"opt\": 2, \"jobs\": 16, \"max_time_per_fc\": 0, \"debug\": true, \"progress_bar\": true, \"advice\": 0.0, \"balance\": 100, \"input_no_padding\": false, \"output_no_padding\": false}",
+  "original conv ops": 609893910528
+ },
+ "performance": {
+  "FPS": 26.37,
+  "latency (ms)": 37.92,
+  "latency (us)": 37923.6,
+  "latency (us) by segments": [
+   37.923
+  ],
+  "multicore sync time (ms)": 0,
+  "multicore sync time (us)": 0,
+  "run per second": 26.37
+ },
+ "tool info": {
+  "hbdk version": "4.2.11"
+ }
+}

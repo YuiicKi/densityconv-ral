@@ -1,0 +1,20 @@
+model_parameters:
+  onnx_model: '/workspace/export/densepillar_dc_rr13_gt05.onnx'
+  march: "nash-e"
+  working_dir: '/workspace/revision_rr26/03_calib_seeds_sizes/quant_runs/rr13/DC_rr13_maxpct_pt_asym_s2_256_oe320'
+  output_model_file_prefix: 'dc_rr13_maxpct_pt_asym_s2_256'
+input_parameters:
+  input_name: 'bev_features;bev_mask'
+  input_shape: '1x32x1088x1088;1x1x1088x1088'
+  input_type_rt: 'featuremap;featuremap'
+  input_type_train: 'featuremap;featuremap'
+  input_layout_train: 'NCHW;NCHW'
+  norm_type: 'no_preprocess;no_preprocess'
+calibration_parameters:
+  cal_data_dir: '/workspace/revision_rr26/03_calib_seeds_sizes/calib_rr13/dc_s2_256/bev;/workspace/revision_rr26/03_calib_seeds_sizes/calib_rr13/dc_s2_256/mask'
+  cal_data_type: 'float32;float32'
+  calibration_type: 'max'
+  max_percentile: 0.99995
+  optimization: asymmetric
+compiler_parameters:
+  optimize_level: 'O2'

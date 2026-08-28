@@ -1,0 +1,27 @@
+2026-08-04 17:42:45,845 [92mINFO[0m The log will be stored in /open_explorer/hb_compile.log
+2026-08-04 17:42:45,846 [92mINFO[0m Start hb_compile...
+2026-08-04 17:42:45,846 [92mINFO[0m hbdk version: 4.2.11
+2026-08-04 17:42:45,846 [92mINFO[0m hmct version: 2.4.1
+2026-08-04 17:42:45,846 [92mINFO[0m hb_compile version: 3.3.22
+2026-08-04 17:42:45,846 [92mINFO[0m Start verifying yaml
+2026-08-04 17:42:45,944 [92mINFO[0m Using the onnx model file: /workspace/export/conv2d_only_centerpoint.onnx
+2026-08-04 17:42:45,945 [92mINFO[0m Model has 1 inputs according to model file
+2026-08-04 17:42:45,945 [93mWARNING[0m The input_type_train is featuremap, the input_layout_train will not take effect
+2026-08-04 17:42:45,946 [93mWARNING[0m Please note that the parameter norm_type has been deprecated and will be determined by the specification of the mean/scale/std parameters
+2026-08-04 17:42:45,946 [93mWARNING[0m Please note that the parameter 'cal_data_type' has been deprecated. Please switch the calibration dataset to npy.
+2026-08-04 17:42:45,946 [93mWARNING[0m The suffix of the calibration dir name is not the same as the value float32 specified by the parameter cal_data_type, the parameter specification will prevail
+2026-08-04 17:42:45,946 [93mWARNING[0m The input node bev_features's input_source is not be specified, it will be specified as None by default
+2026-08-04 17:42:45,946 [92mINFO[0m The parameter compile_mode is specified as latency, the balance_factor will be specified as 100.
+2026-08-04 17:42:45,946 [92mINFO[0m End verifying yaml
+2026-08-04 17:42:45,947 [92mINFO[0m Processing calibration set data for input[bev_features]
+2026-08-04 17:42:45,951 [92mINFO[0m *******************************************
+2026-08-04 17:42:45,951 [92mINFO[0m First calibration picture name: /workspace/export/train_conv2d_expD/bev/bev_00130.bin
+2026-08-04 17:42:46,380 [92mINFO[0m First calibration picture md5: 6eaed1f316957f711428eeb9cd53ebf3
+2026-08-04 17:42:46,380 [92mINFO[0m *******************************************
+2026-08-04 17:43:57,929 [92mINFO[0m Finished. data num: 256
+2026-08-04 17:44:32,600 [92mINFO[0m Start to Horizon NN Model Convert.
+2026-08-04 17:44:32,784 [92mINFO[0m Loading horizon_nn debug methods: set().
+2026-08-04 17:44:32,785 [92mINFO[0m The specified model compilation architecture: nash-e.
+2026-08-04 17:44:32,785 [92mINFO[0m The specified model compilation optimization parameters: ['symmetric'].
+2026-08-04 17:44:32,787 [91mERROR[0m *** ERROR-OCCUR-DURING hmct.api.build_model ***, error message: ERROR: The optimization parameter: symmetric is not supported by BPU March:nash-e. Please check the specified optimization configuration.
+2026-08-04 17:44:32,787 [92mINFO[0m End to Horizon NN Model Convert.

@@ -1,0 +1,45 @@
+[UCP]: log level = 3
+[UCP]: UCP version = 3.13.6
+[VP]: log level = 3
+[DNN]: log level = 3
+[HPL]: log level = 3
+[UCPT]: log level = 6
+hrt_model_exec perf --model_file /mnt/ssd/hbm_rr13/c2_rr13_maxpct_pc_asym_s42_256.hbm --frame_count 4000 --thread_num 1
+
+[1;33m [Warning]: These operators have range limitations on input data: [0m
+[1;33m [Acos, Acosh, Asin, Atanh, BevPoolV2, Div, Gather, GatherElements, GatherND, GridSample, ImageDecoder, IndexSelect, Log, Mod, Pow, Reciprocal, RoiAlign, ScatterElements, ScatterND, Slice, Sqrt, Tan, Tile, Topk, Upsample]. [0m
+[1;33m Please make sure that these operators are not in your model, when no input data is provided to the tool. [0m
+[1;33m [Suggestion]: Using --input_file command to specify perf input data, which can appoint valid input data.  [0m
+
+[BPU][[BPU_MONITOR]][281473114010912][INFO]BPULib verison(2, 2, 15)[f21ee84]!
+[DNN]: 3.13.6_(4.7.5 HBRT)
+Load model to DDR cost 801.588ms.
+Frame count: 200,  Thread Average: 35.019894 ms,  thread max latency: 36.379002 ms,  thread min latency: 34.733002 ms,  FPS: 28.531094
+Frame count: 400,  Thread Average: 35.014320 ms,  thread max latency: 36.803001 ms,  thread min latency: 34.715000 ms,  FPS: 28.536165
+Frame count: 600,  Thread Average: 35.013290 ms,  thread max latency: 36.803001 ms,  thread min latency: 34.715000 ms,  FPS: 28.536213
+Frame count: 800,  Thread Average: 35.004856 ms,  thread max latency: 36.803001 ms,  thread min latency: 34.702999 ms,  FPS: 28.542862
+Frame count: 1000,  Thread Average: 34.999718 ms,  thread max latency: 36.803001 ms,  thread min latency: 34.695999 ms,  FPS: 28.547136
+Frame count: 1200,  Thread Average: 34.997089 ms,  thread max latency: 36.803001 ms,  thread min latency: 34.686001 ms,  FPS: 28.549004
+Frame count: 1400,  Thread Average: 34.995819 ms,  thread max latency: 36.803001 ms,  thread min latency: 34.686001 ms,  FPS: 28.549826
+Frame count: 1600,  Thread Average: 34.995407 ms,  thread max latency: 36.803001 ms,  thread min latency: 34.686001 ms,  FPS: 28.549885
+Frame count: 1800,  Thread Average: 34.993294 ms,  thread max latency: 36.803001 ms,  thread min latency: 34.686001 ms,  FPS: 28.551867
+Frame count: 2000,  Thread Average: 34.992840 ms,  thread max latency: 36.887001 ms,  thread min latency: 34.686001 ms,  FPS: 28.552401
+Frame count: 2200,  Thread Average: 34.991547 ms,  thread max latency: 36.887001 ms,  thread min latency: 34.686001 ms,  FPS: 28.553537
+Frame count: 2400,  Thread Average: 34.990166 ms,  thread max latency: 36.887001 ms,  thread min latency: 34.686001 ms,  FPS: 28.554462
+Frame count: 2600,  Thread Average: 34.990189 ms,  thread max latency: 36.887001 ms,  thread min latency: 34.686001 ms,  FPS: 28.554384
+Frame count: 2800,  Thread Average: 34.989822 ms,  thread max latency: 36.887001 ms,  thread min latency: 34.686001 ms,  FPS: 28.554678
+Frame count: 3000,  Thread Average: 34.991516 ms,  thread max latency: 36.887001 ms,  thread min latency: 34.686001 ms,  FPS: 28.553389
+Frame count: 3200,  Thread Average: 34.992714 ms,  thread max latency: 36.887001 ms,  thread min latency: 34.686001 ms,  FPS: 28.552511
+Frame count: 3400,  Thread Average: 34.992184 ms,  thread max latency: 36.887001 ms,  thread min latency: 34.686001 ms,  FPS: 28.553143
+Frame count: 3600,  Thread Average: 34.990616 ms,  thread max latency: 36.887001 ms,  thread min latency: 34.686001 ms,  FPS: 28.554554
+Frame count: 3800,  Thread Average: 34.989731 ms,  thread max latency: 36.887001 ms,  thread min latency: 34.681000 ms,  FPS: 28.555519
+Frame count: 4000,  Thread Average: 34.988991 ms,  thread max latency: 36.887001 ms,  thread min latency: 34.681000 ms,  FPS: 28.556097
+
+Running condition:
+  Thread number is: 1
+  Frame count   is: 4000
+  Program run time: 140075.531 ms
+Perf result:
+  Frame totally latency is: 139955.969 ms
+  Average    latency    is: 34.989 ms
+  Frame      rate       is: 28.556 FPS

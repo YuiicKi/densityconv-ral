@@ -1,0 +1,24 @@
+ucp_version,3.13.6_(4.7.5 HBRT)
+running_condition
+thread_num,1
+core_id,"0"
+frame_count,20
+run_time,913.1610107421875
+model_name,"dc_rr13_maxpct_pc_asym_s42_256"
+
+perf_result
+average_latency,45.616600036621094
+FPS,21.90909194946289
+
+processor_latency, avg_time, max_time, min_time
+BPU_inference_time_cost,45.5586,46.501,45.316,
+CPU_inference_time_cost,0.0,0.0,0.0,
+
+task_latency, avg_time, max_time, min_time
+TaskRunningTime,45.595800000000004,46.533,45.347,
+
+model nodes, avg_time, max_time, min_time
+"Node-0-BPU-/Greater_id_4_bpu_segment_0"
+"Stage1-GenerateBpuTask",0.0813,0.111,0.068
+"Stage2-BpuCoreProcess",45.46175,46.414,45.231
+"Total",45.5586,46.501,45.316

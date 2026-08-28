@@ -1,0 +1,360 @@
+2026-08-05 23:17:44,080 [92mINFO[0m The log will be stored in /workspace/revision_rr26/02_fixed_quant_probe/hb_compile.log
+2026-08-05 23:17:44,080 [92mINFO[0m Start hb_compile...
+2026-08-05 23:17:44,080 [92mINFO[0m hbdk version: 4.2.11
+2026-08-05 23:17:44,081 [92mINFO[0m hmct version: 2.4.1
+2026-08-05 23:17:44,081 [92mINFO[0m hb_compile version: 3.3.22
+2026-08-05 23:17:44,081 [92mINFO[0m Start verifying yaml
+2026-08-05 23:17:44,136 [92mINFO[0m Using the onnx model file: /workspace/export/conv2d_only_centerpoint.onnx
+2026-08-05 23:17:44,137 [92mINFO[0m Model has 1 inputs according to model file
+2026-08-05 23:17:44,137 [93mWARNING[0m The input_type_train is featuremap, the input_layout_train will not take effect
+2026-08-05 23:17:44,137 [93mWARNING[0m Please note that the parameter norm_type has been deprecated and will be determined by the specification of the mean/scale/std parameters
+2026-08-05 23:17:44,142 [93mWARNING[0m Please note that the parameter 'cal_data_type' has been deprecated. Please switch the calibration dataset to npy.
+2026-08-05 23:17:44,142 [93mWARNING[0m The suffix of the calibration dir name is not the same as the value float32 specified by the parameter cal_data_type, the parameter specification will prevail
+2026-08-05 23:17:44,142 [93mWARNING[0m The input node bev_features's input_source is not be specified, it will be specified as None by default
+2026-08-05 23:17:44,142 [92mINFO[0m The parameter compile_mode is specified as latency, the balance_factor will be specified as 100.
+2026-08-05 23:17:44,142 [92mINFO[0m End verifying yaml
+2026-08-05 23:17:44,142 [92mINFO[0m Processing calibration set data for input[bev_features]
+2026-08-05 23:17:44,284 [92mINFO[0m *******************************************
+2026-08-05 23:17:44,285 [92mINFO[0m First calibration picture name: /workspace/export/train_conv2d_expF/bev/bev_00229.bin
+2026-08-05 23:17:44,652 [92mINFO[0m First calibration picture md5: 4b2128ec3b2ed2d443527aac245f8a99
+2026-08-05 23:17:44,652 [92mINFO[0m *******************************************
+2026-08-05 23:18:54,358 [92mINFO[0m Finished. data num: 256
+2026-08-05 23:19:35,933 [92mINFO[0m Start to Horizon NN Model Convert.
+2026-08-05 23:19:35,994 [92mINFO[0m Loading horizon_nn debug methods: set().
+2026-08-05 23:19:35,994 [92mINFO[0m The specified model compilation architecture: nash-e.
+2026-08-05 23:19:35,995 [92mINFO[0m The specified model compilation optimization parameters: [].
+2026-08-05 23:19:35,995 [92mINFO[0m Start to prepare the onnx model.
+2026-08-05 23:19:36,014 [92mINFO[0m Input ONNX Model Information:
+IR Version:               6
+Opset Version:            ['ai.onnx v11', 'horizon v1']
+Model Producer:           pytorch v2.7.1
+Model Domain:             None
+Model Version:            None
+Graph Input:
+    ...eatures          : shape=[1, 32, 1088, 1088], dtype=FLOAT32
+Graph Output:
+    head_0              : shape=['Concathead_0_dim_0', 11, 'Concathead_0_dim_2', 'Concathead_0_dim_3'], dtype=FLOAT32
+    head_1              : shape=['Concathead_1_dim_0', 12, 'Concathead_1_dim_2', 'Concathead_1_dim_3'], dtype=FLOAT32
+    head_2              : shape=['Concathead_2_dim_0', 12, 'Concathead_2_dim_2', 'Concathead_2_dim_3'], dtype=FLOAT32
+    head_3              : shape=['Concathead_3_dim_0', 11, 'Concathead_3_dim_2', 'Concathead_3_dim_3'], dtype=FLOAT32
+    head_4              : shape=['Concathead_4_dim_0', 12, 'Concathead_4_dim_2', 'Concathead_4_dim_3'], dtype=FLOAT32
+    head_5              : shape=['Concathead_5_dim_0', 12, 'Concathead_5_dim_2', 'Concathead_5_dim_3'], dtype=FLOAT32
+2026-08-05 23:19:36,015 [92mINFO[0m The input model's opset version is 11, try to convert to opset version of 19.
+2026-08-05 23:19:36,483 [92mINFO[0m End to prepare the onnx model.
+2026-08-05 23:19:36,542 [92mINFO[0m Saving model to: /workspace/revision_rr26/02_fixed_quant_probe/quant_runs/C2_paperv2_max_pc_asym_rand256_expF_oe320/c2_max_pc_asym_expF_original_float_model.onnx.
+2026-08-05 23:19:36,542 [92mINFO[0m Start to optimize the onnx model.
+2026-08-05 23:19:38,006 [92mINFO[0m End to optimize the onnx model.
+2026-08-05 23:19:38,062 [92mINFO[0m Saving model to: /workspace/revision_rr26/02_fixed_quant_probe/quant_runs/C2_paperv2_max_pc_asym_rand256_expF_oe320/c2_max_pc_asym_expF_optimized_float_model.onnx.
+2026-08-05 23:19:38,062 [92mINFO[0m The activation calibration configuration:
+    calibration_type:     max
+    per_channel:          True
+    asymmetric:           True
+2026-08-05 23:19:38,062 [92mINFO[0m Start to calibrate the model.
+2026-08-05 23:19:38,084 [92mINFO[0m There are 256 samples in the dataset.
+2026-08-05 23:21:15,581 [92mINFO[0m Provided calibration data md5: e4c10cab7b7da194ef5fdf256e04a5be
+2026-08-05 23:21:16,092 [92mINFO[0m Run calibration model with max:per_channel,asymmetric method.
+2026-08-05 23:21:16,735 [92mINFO[0m Calibration using batch 8
+calibration in progress:   0%|          | 0/32 [00:00<?, ?it/s]calibration in progress:   3%|▎         | 1/32 [00:14<07:14, 14.01s/it]calibration in progress:   6%|▋         | 2/32 [00:27<06:59, 13.99s/it]calibration in progress:   9%|▉         | 3/32 [00:42<06:52, 14.24s/it]calibration in progress:  12%|█▎        | 4/32 [00:57<06:48, 14.58s/it]calibration in progress:  16%|█▌        | 5/32 [01:10<06:19, 14.07s/it]calibration in progress:  19%|█▉        | 6/32 [01:23<05:54, 13.64s/it]calibration in progress:  22%|██▏       | 7/32 [01:35<05:28, 13.12s/it]calibration in progress:  25%|██▌       | 8/32 [01:49<05:20, 13.34s/it]calibration in progress:  28%|██▊       | 9/32 [02:02<05:06, 13.31s/it]calibration in progress:  31%|███▏      | 10/32 [02:17<05:04, 13.86s/it]calibration in progress:  34%|███▍      | 11/32 [02:30<04:43, 13.52s/it]calibration in progress:  38%|███▊      | 12/32 [02:43<04:24, 13.21s/it]calibration in progress:  41%|████      | 13/32 [02:57<04:16, 13.49s/it]calibration in progress:  44%|████▍     | 14/32 [03:10<04:03, 13.53s/it]calibration in progress:  47%|████▋     | 15/32 [03:24<03:49, 13.52s/it]calibration in progress:  50%|█████     | 16/32 [03:37<03:36, 13.54s/it]calibration in progress:  53%|█████▎    | 17/32 [03:52<03:26, 13.77s/it]calibration in progress:  56%|█████▋    | 18/32 [04:04<03:06, 13.29s/it]calibration in progress:  59%|█████▉    | 19/32 [04:16<02:49, 13.02s/it]calibration in progress:  62%|██████▎   | 20/32 [04:30<02:37, 13.16s/it]calibration in progress:  66%|██████▌   | 21/32 [04:44<02:26, 13.36s/it]calibration in progress:  69%|██████▉   | 22/32 [04:58<02:16, 13.66s/it]calibration in progress:  72%|███████▏  | 23/32 [05:13<02:06, 14.09s/it]calibration in progress:  75%|███████▌  | 24/32 [05:27<01:51, 13.95s/it]calibration in progress:  78%|███████▊  | 25/32 [05:39<01:35, 13.57s/it]calibration in progress:  81%|████████▏ | 26/32 [05:52<01:20, 13.44s/it]calibration in progress:  84%|████████▍ | 27/32 [06:06<01:07, 13.42s/it]calibration in progress:  88%|████████▊ | 28/32 [06:19<00:53, 13.41s/it]calibration in progress:  91%|█████████ | 29/32 [06:32<00:39, 13.27s/it]calibration in progress:  94%|█████████▍| 30/32 [06:47<00:27, 13.62s/it]calibration in progress:  97%|█████████▋| 31/32 [07:00<00:13, 13.59s/it]calibration in progress: 100%|██████████| 32/32 [07:13<00:00, 13.46s/it]calibration in progress: 100%|██████████| 32/32 [07:13<00:00, 13.56s/it]
+2026-08-05 23:28:32,613 [92mINFO[0m Calibration using batch 8
+calibration in progress:   0%|          | 0/32 [00:00<?, ?it/s]calibration in progress:   3%|▎         | 1/32 [00:17<08:52, 17.19s/it]calibration in progress:   6%|▋         | 2/32 [00:34<08:46, 17.54s/it]calibration in progress:   9%|▉         | 3/32 [00:52<08:29, 17.57s/it]calibration in progress:  12%|█▎        | 4/32 [01:10<08:17, 17.75s/it]calibration in progress:  16%|█▌        | 5/32 [01:27<07:50, 17.41s/it]calibration in progress:  19%|█▉        | 6/32 [01:46<07:43, 17.81s/it]calibration in progress:  22%|██▏       | 7/32 [02:02<07:17, 17.49s/it]calibration in progress:  25%|██▌       | 8/32 [02:18<06:46, 16.95s/it]calibration in progress:  28%|██▊       | 9/32 [02:38<06:47, 17.71s/it]calibration in progress:  31%|███▏      | 10/32 [02:55<06:29, 17.70s/it]calibration in progress:  34%|███▍      | 11/32 [03:14<06:17, 17.99s/it]calibration in progress:  38%|███▊      | 12/32 [03:31<05:57, 17.87s/it]calibration in progress:  41%|████      | 13/32 [03:48<05:30, 17.39s/it]calibration in progress:  44%|████▍     | 14/32 [04:05<05:13, 17.43s/it]calibration in progress:  47%|████▋     | 15/32 [04:21<04:46, 16.84s/it]calibration in progress:  50%|█████     | 16/32 [04:37<04:28, 16.78s/it]calibration in progress:  53%|█████▎    | 17/32 [04:54<04:10, 16.71s/it]calibration in progress:  56%|█████▋    | 18/32 [05:10<03:50, 16.50s/it]calibration in progress:  59%|█████▉    | 19/32 [05:27<03:35, 16.54s/it]calibration in progress:  62%|██████▎   | 20/32 [05:42<03:14, 16.22s/it]calibration in progress:  66%|██████▌   | 21/32 [05:58<02:57, 16.13s/it]calibration in progress:  69%|██████▉   | 22/32 [06:14<02:41, 16.13s/it]calibration in progress:  72%|███████▏  | 23/32 [06:30<02:24, 16.09s/it]calibration in progress:  75%|███████▌  | 24/32 [06:45<02:06, 15.87s/it]calibration in progress:  78%|███████▊  | 25/32 [07:02<01:51, 16.00s/it]calibration in progress:  81%|████████▏ | 26/32 [07:17<01:34, 15.70s/it]calibration in progress:  84%|████████▍ | 27/32 [07:33<01:19, 15.93s/it]calibration in progress:  88%|████████▊ | 28/32 [07:50<01:04, 16.20s/it]calibration in progress:  91%|█████████ | 29/32 [08:06<00:48, 16.21s/it]calibration in progress:  94%|█████████▍| 30/32 [08:23<00:32, 16.36s/it]calibration in progress:  97%|█████████▋| 31/32 [08:39<00:16, 16.18s/it]calibration in progress: 100%|██████████| 32/32 [08:55<00:00, 16.22s/it]calibration in progress: 100%|██████████| 32/32 [08:55<00:00, 16.74s/it]
+2026-08-05 23:37:29,317 [92mINFO[0m Perchannel quantization is enabled.
+2026-08-05 23:37:29,317 [92mINFO[0m Asymmetric quantization is enabled.
+2026-08-05 23:37:30,134 [92mINFO[0m End to calibrate the model.
+2026-08-05 23:37:30,231 [92mINFO[0m Saving model to: /workspace/revision_rr26/02_fixed_quant_probe/quant_runs/C2_paperv2_max_pc_asym_rand256_expF_oe320/c2_max_pc_asym_expF_calibrated_model.onnx.
+2026-08-05 23:37:30,231 [92mINFO[0m Start to quantize the model.
+2026-08-05 23:37:31,790 [92mINFO[0m End to quantize the model.
+2026-08-05 23:37:31,892 [92mINFO[0m Saving model to: /workspace/revision_rr26/02_fixed_quant_probe/quant_runs/C2_paperv2_max_pc_asym_rand256_expF_oe320/c2_max_pc_asym_expF_ptq_model.onnx.
+2026-08-05 23:38:42,142 [92mINFO[0m End to Horizon NN Model Convert.
+2026-08-05 23:38:45,009 [92mINFO[0m Start to export model.
+2026-08-05 23:38:45,928 [92mINFO[0m Successfully export model.
+2026-08-05 23:38:45,929 [92mINFO[0m Start to convert model.
+2026-08-05 23:38:47,468 [92mINFO[0m Successfully convert model.
+2026-08-05 23:38:47,538 [92mINFO[0m Start to check params ...
+2026-08-05 23:38:48,661 [92mINFO[0m End to check params.
+2026-08-05 23:38:48,744 [92mINFO[0m Start to inference onnx model c2_max_pc_asym_expF_optimized_float_model
+2026-08-05 23:38:51,916 [92mINFO[0m Start to inference bc model c2_max_pc_asym_expF_quantized_model
+2026-08-05 23:39:17,447 [92mINFO[0m +------------------------------------------+---------------+---------+-----------+-------------------+------------------+------------------+
+2026-08-05 23:39:17,447 [92mINFO[0m | Node                                     | NodeType      | ON      | Threshold | Calibrated Cosine | Quantized Cosine | Output Data Type |
+2026-08-05 23:39:17,448 [92mINFO[0m +------------------------------------------+---------------+---------+-----------+-------------------+------------------+------------------+
+2026-08-05 23:39:17,448 [92mINFO[0m | /conv1/conv1.0/Conv                      | Conv          | BPU     | 6.745058  | 0.999617          | --               | si8              |
+2026-08-05 23:39:17,448 [92mINFO[0m | /conv1/conv1.2/Relu                      | Relu          | BPU     | --        | 0.999600          | --               | si8              |
+2026-08-05 23:39:17,448 [92mINFO[0m | /conv1/conv1.3/conv1/Conv                | Conv          | --      | 3.252844  | 0.997417          | --               | --               |
+2026-08-05 23:39:17,448 [92mINFO[0m | /conv1/conv1.3/relu/Relu                 | Relu          | --      | --        | 0.975198          | --               | --               |
+2026-08-05 23:39:17,448 [92mINFO[0m | /conv1/conv1.3/conv2/Conv                | Conv          | --      | 33.826881 | 0.941161          | --               | --               |
+2026-08-05 23:39:17,448 [92mINFO[0m | /conv1/conv1.3/Add                       | Add           | --      | --        | 0.950476          | --               | --               |
+2026-08-05 23:39:17,448 [92mINFO[0m | /conv1/conv1.3/relu_1/Relu               | Relu          | --      | --        | 0.928669          | --               | --               |
+2026-08-05 23:39:17,448 [92mINFO[0m | /conv2/conv2.0/Conv                      | Conv          | BPU     | 20.030985 | 0.766288          | --               | si8              |
+2026-08-05 23:39:17,448 [92mINFO[0m | /conv2/conv2.2/Relu                      | Relu          | BPU     | --        | 0.881077          | --               | si8              |
+2026-08-05 23:39:17,448 [92mINFO[0m | /conv2/conv2.3/conv1/Conv                | Conv          | BPU     | 14.163285 | 0.760223          | --               | si8              |
+2026-08-05 23:39:17,448 [92mINFO[0m | /conv2/conv2.3/relu/Relu                 | Relu          | BPU     | --        | 0.769244          | --               | si8              |
+2026-08-05 23:39:17,448 [92mINFO[0m | /conv2/conv2.3/conv2/Conv                | Conv          | CPU     | 11.0651   | 0.749348          | --               | si8              |
+2026-08-05 23:39:17,448 [92mINFO[0m | /conv2/conv2.3/Add                       | Add           | CPU     | --        | 0.808414          | --               | si8              |
+2026-08-05 23:39:17,448 [92mINFO[0m | /conv2/conv2.3/relu_1/Relu               | Relu          | CPU     | --        | 0.847030          | --               | si8              |
+2026-08-05 23:39:17,448 [92mINFO[0m | /conv2/conv2.4/conv1/Conv                | Conv          | BPU     | 6.847017  | 0.574021          | --               | si8              |
+2026-08-05 23:39:17,448 [92mINFO[0m | /conv2/conv2.4/relu/Relu                 | Relu          | BPU     | --        | 0.672747          | --               | si8              |
+2026-08-05 23:39:17,448 [92mINFO[0m | /conv2/conv2.4/conv2/Conv                | Conv          | CPU     | 12.920099 | 0.637922          | --               | si8              |
+2026-08-05 23:39:17,448 [92mINFO[0m | /conv2/conv2.4/Add                       | Add           | CPU     | --        | 0.690905          | --               | si8              |
+2026-08-05 23:39:17,448 [92mINFO[0m | /conv2/conv2.4/relu_1/Relu               | Relu          | CPU     | --        | 0.859098          | --               | si8              |
+2026-08-05 23:39:17,448 [92mINFO[0m | /conv3/conv3.0/Conv                      | Conv          | BPU     | 12.896804 | 0.699832          | --               | si8              |
+2026-08-05 23:39:17,449 [92mINFO[0m | /conv3/conv3.2/Relu                      | Relu          | BPU     | --        | 0.759416          | --               | si8              |
+2026-08-05 23:39:17,449 [92mINFO[0m | /conv3/conv3.3/conv1/Conv                | Conv          | BPU     | 13.366559 | 0.766285          | --               | si8              |
+2026-08-05 23:39:17,449 [92mINFO[0m | /conv3/conv3.3/relu/Relu                 | Relu          | BPU     | --        | 0.731158          | --               | si8              |
+2026-08-05 23:39:17,449 [92mINFO[0m | /conv3/conv3.3/conv2/Conv                | Conv          | CPU     | 8.72788   | 0.649716          | --               | si8              |
+2026-08-05 23:39:17,449 [92mINFO[0m | /conv3/conv3.3/Add                       | Add           | CPU     | --        | 0.673757          | --               | si8              |
+2026-08-05 23:39:17,449 [92mINFO[0m | /conv3/conv3.3/relu_1/Relu               | Relu          | CPU     | --        | 0.792112          | --               | si8              |
+2026-08-05 23:39:17,449 [92mINFO[0m | /conv3/conv3.4/conv1/Conv                | Conv          | BPU     | 14.372538 | 0.875517          | --               | si8              |
+2026-08-05 23:39:17,449 [92mINFO[0m | /conv3/conv3.4/relu/Relu                 | Relu          | BPU     | --        | 0.761546          | --               | si8              |
+2026-08-05 23:39:17,449 [92mINFO[0m | /conv3/conv3.4/conv2/Conv                | Conv          | --      | 8.570507  | 0.849372          | --               | --               |
+2026-08-05 23:39:17,449 [92mINFO[0m | /conv3/conv3.4/Add                       | Add           | --      | --        | 0.824770          | --               | --               |
+2026-08-05 23:39:17,449 [92mINFO[0m | /conv3/conv3.4/relu_1/Relu               | Relu          | --      | --        | 0.820409          | --               | --               |
+2026-08-05 23:39:17,449 [92mINFO[0m | /conv4/conv4.0/Conv                      | Conv          | BPU     | 16.783335 | 0.785611          | --               | si8              |
+2026-08-05 23:39:17,449 [92mINFO[0m | /conv4/conv4.2/Relu                      | Relu          | BPU     | --        | 0.842743          | --               | si8              |
+2026-08-05 23:39:17,449 [92mINFO[0m | /conv4/conv4.3/conv1/Conv                | Conv          | BPU     | 13.62758  | 0.824969          | --               | si8              |
+2026-08-05 23:39:17,449 [92mINFO[0m | /conv4/conv4.3/relu/Relu                 | Relu          | BPU     | --        | 0.718995          | --               | si8              |
+2026-08-05 23:39:17,449 [92mINFO[0m | /conv4/conv4.3/conv2/Conv                | Conv          | CPU     | 6.289046  | 0.770829          | --               | si8              |
+2026-08-05 23:39:17,449 [92mINFO[0m | /conv4/conv4.3/Add                       | Add           | CPU     | --        | 0.781140          | --               | si8              |
+2026-08-05 23:39:17,449 [92mINFO[0m | /conv4/conv4.3/relu_1/Relu               | Relu          | CPU     | --        | 0.812857          | --               | si8              |
+2026-08-05 23:39:17,449 [92mINFO[0m | /conv4/conv4.4/conv1/Conv                | Conv          | BPU     | 15.564191 | 0.880411          | --               | si8              |
+2026-08-05 23:39:17,449 [92mINFO[0m | /conv4/conv4.4/relu/Relu                 | Relu          | BPU     | --        | 0.653599          | --               | si8              |
+2026-08-05 23:39:17,449 [92mINFO[0m | /conv4/conv4.4/conv2/Conv                | Conv          | BPU     | 5.276937  | 0.678039          | --               | si8              |
+2026-08-05 23:39:17,449 [92mINFO[0m | /conv4/conv4.4/Add                       | Add           | BPU     | --        | 0.678345          | --               | si8              |
+2026-08-05 23:39:17,450 [92mINFO[0m | /conv4/conv4.4/relu_1/Relu               | Relu          | BPU     | --        | 0.785239          | --               | si8              |
+2026-08-05 23:39:17,450 [92mINFO[0m | /conv5/conv5.0/Conv                      | Conv          | BPU     | 13.787707 | 0.736658          | --               | si8              |
+2026-08-05 23:39:17,450 [92mINFO[0m | /conv5/conv5.2/Relu                      | Relu          | BPU     | --        | 0.752851          | --               | si8              |
+2026-08-05 23:39:17,450 [92mINFO[0m | /conv5/conv5.3/conv1/Conv                | Conv          | BPU     | 6.668373  | 0.824905          | --               | si8              |
+2026-08-05 23:39:17,450 [92mINFO[0m | /conv5/conv5.3/relu/Relu                 | Relu          | BPU     | --        | 0.653797          | --               | si8              |
+2026-08-05 23:39:17,450 [92mINFO[0m | /conv5/conv5.3/conv2/Conv                | Conv          | CPU     | 4.0611    | 0.740015          | --               | si8              |
+2026-08-05 23:39:17,450 [92mINFO[0m | /conv5/conv5.3/Add                       | Add           | CPU     | --        | 0.713980          | --               | si8              |
+2026-08-05 23:39:17,450 [92mINFO[0m | /conv5/conv5.3/relu_1/Relu               | Relu          | CPU     | --        | 0.717945          | --               | si8              |
+2026-08-05 23:39:17,450 [92mINFO[0m | /conv5/conv5.4/conv1/Conv                | Conv          | BPU     | 8.391508  | 0.832608          | --               | si8              |
+2026-08-05 23:39:17,450 [92mINFO[0m | /conv5/conv5.4/relu/Relu                 | Relu          | BPU     | --        | 0.646526          | --               | si8              |
+2026-08-05 23:39:17,450 [92mINFO[0m | /conv5/conv5.4/conv2/Conv                | Conv          | CPU     | 4.208474  | 0.809626          | --               | si8              |
+2026-08-05 23:39:17,450 [92mINFO[0m | /conv5/conv5.4/Add                       | Add           | CPU     | --        | 0.728268          | --               | si8              |
+2026-08-05 23:39:17,450 [92mINFO[0m | /conv5/conv5.4/relu_1/Relu               | Relu          | CPU     | --        | 0.695984          | --               | si8              |
+2026-08-05 23:39:17,450 [92mINFO[0m | ...ocks.0/bev_deblocks.0.0/ConvTranspose | ConvTranspose | BPU     | 13.787707 | 0.760426          | --               | si8              |
+2026-08-05 23:39:17,450 [92mINFO[0m | /bev_deblocks.0/bev_deblocks.0.2/Relu    | Relu          | BPU     | --        | 0.838426          | --               | si8              |
+2026-08-05 23:39:17,450 [92mINFO[0m | /bev_blocks.1/bev_blocks.1.1/Conv        | Conv          | BPU     | 8.756989  | 0.771035          | --               | si8              |
+2026-08-05 23:39:17,450 [92mINFO[0m | /bev_blocks.1/bev_blocks.1.3/Relu        | Relu          | BPU     | --        | 0.644847          | --               | si8              |
+2026-08-05 23:39:17,450 [92mINFO[0m | /bev_blocks.1/bev_blocks.1.4/Conv        | Conv          | BPU     | 5.059795  | 0.701625          | --               | si8              |
+2026-08-05 23:39:17,450 [92mINFO[0m | /bev_blocks.1/bev_blocks.1.6/Relu        | Relu          | BPU     | --        | 0.653193          | --               | si8              |
+2026-08-05 23:39:17,450 [92mINFO[0m | /bev_blocks.1/bev_blocks.1.7/Conv        | Conv          | BPU     | 5.056221  | 0.702075          | --               | si8              |
+2026-08-05 23:39:17,450 [92mINFO[0m | /bev_blocks.1/bev_blocks.1.9/Relu        | Relu          | BPU     | --        | 0.752419          | --               | si8              |
+2026-08-05 23:39:17,450 [92mINFO[0m | /bev_blocks.1/bev_blocks.1.10/Conv       | Conv          | BPU     | 7.466932  | 0.709216          | --               | si8              |
+2026-08-05 23:39:17,451 [92mINFO[0m | /bev_blocks.1/bev_blocks.1.12/Relu       | Relu          | BPU     | --        | 0.809917          | --               | si8              |
+2026-08-05 23:39:17,451 [92mINFO[0m | /bev_blocks.1/bev_blocks.1.13/Conv       | Conv          | BPU     | 6.579662  | 0.715635          | --               | si8              |
+2026-08-05 23:39:17,451 [92mINFO[0m | /bev_blocks.1/bev_blocks.1.15/Relu       | Relu          | BPU     | --        | 0.754192          | --               | si8              |
+2026-08-05 23:39:17,451 [92mINFO[0m | /bev_blocks.1/bev_blocks.1.16/Conv       | Conv          | BPU     | 5.351594  | 0.627031          | --               | si8              |
+2026-08-05 23:39:17,451 [92mINFO[0m | /bev_blocks.1/bev_blocks.1.18/Relu       | Relu          | BPU     | --        | 0.649093          | --               | si8              |
+2026-08-05 23:39:17,451 [92mINFO[0m | ...ocks.1/bev_deblocks.1.0/ConvTranspose | ConvTranspose | BPU     | 4.980311  | 0.670907          | --               | si8              |
+2026-08-05 23:39:17,451 [92mINFO[0m | /bev_deblocks.1/bev_deblocks.1.2/Relu    | Relu          | BPU     | --        | 0.722451          | --               | si8              |
+2026-08-05 23:39:17,451 [92mINFO[0m | /Concat                                  | Concat        | BPU     | 10.418265 | 0.824353          | --               | si8              |
+2026-08-05 23:39:17,451 [92mINFO[0m | /bev_blocks.0/bev_blocks.0.1/Conv        | Conv          | BPU     | 10.418265 | 0.761379          | --               | si8              |
+2026-08-05 23:39:17,451 [92mINFO[0m | /bev_blocks.0/bev_blocks.0.3/Relu        | Relu          | BPU     | --        | 0.677549          | --               | si8              |
+2026-08-05 23:39:17,451 [92mINFO[0m | /bev_blocks.0/bev_blocks.0.4/Conv        | Conv          | BPU     | 5.873673  | 0.771824          | --               | si8              |
+2026-08-05 23:39:17,451 [92mINFO[0m | /bev_blocks.0/bev_blocks.0.6/Relu        | Relu          | BPU     | --        | 0.665127          | --               | si8              |
+2026-08-05 23:39:17,451 [92mINFO[0m | /bev_blocks.0/bev_blocks.0.7/Conv        | Conv          | BPU     | 5.671307  | 0.761756          | --               | si8              |
+2026-08-05 23:39:17,451 [92mINFO[0m | /bev_blocks.0/bev_blocks.0.9/Relu        | Relu          | BPU     | --        | 0.635748          | --               | si8              |
+2026-08-05 23:39:17,451 [92mINFO[0m | /bev_blocks.0/bev_blocks.0.10/Conv       | Conv          | BPU     | 6.917815  | 0.729135          | --               | si8              |
+2026-08-05 23:39:17,451 [92mINFO[0m | /bev_blocks.0/bev_blocks.0.12/Relu       | Relu          | BPU     | --        | 0.592227          | --               | si8              |
+2026-08-05 23:39:17,451 [92mINFO[0m | /bev_blocks.0/bev_blocks.0.13/Conv       | Conv          | BPU     | 6.814576  | 0.715849          | --               | si8              |
+2026-08-05 23:39:17,451 [92mINFO[0m | /bev_blocks.0/bev_blocks.0.15/Relu       | Relu          | BPU     | --        | 0.612939          | --               | si8              |
+2026-08-05 23:39:17,451 [92mINFO[0m | /bev_blocks.0/bev_blocks.0.16/Conv       | Conv          | BPU     | 5.534515  | 0.746732          | --               | si8              |
+2026-08-05 23:39:17,451 [92mINFO[0m | /bev_blocks.0/bev_blocks.0.18/Relu       | Relu          | BPU     | --        | 0.734961          | --               | si8              |
+2026-08-05 23:39:17,451 [92mINFO[0m | /shared_conv/shared_conv.0/Conv          | Conv          | BPU     | 5.477406  | 0.897708          | --               | si8              |
+2026-08-05 23:39:17,451 [92mINFO[0m | /shared_conv/shared_conv.2/Relu          | Relu          | BPU     | --        | 0.927699          | --               | si8              |
+2026-08-05 23:39:17,452 [92mINFO[0m | ...ist.0/center/center.0/center.0.0/Conv | Conv          | BPU     | 2.17318   | 0.819448          | --               | si8              |
+2026-08-05 23:39:17,452 [92mINFO[0m | ...ist.0/center/center.0/center.0.2/Relu | Relu          | BPU     | --        | 0.839710          | --               | si8              |
+2026-08-05 23:39:17,452 [92mINFO[0m | /heads_list.0/center/center.1/Conv       | Conv          | BPU     | 0.60235   | 0.992551          | 0.992753         | si32             |
+2026-08-05 23:39:17,452 [92mINFO[0m | ...center_z/center_z.0/center_z.0.0/Conv | Conv          | BPU     | 2.17318   | 0.527481          | --               | si8              |
+2026-08-05 23:39:17,452 [92mINFO[0m | ...center_z/center_z.0/center_z.0.2/Relu | Relu          | BPU     | --        | 0.729203          | --               | si8              |
+2026-08-05 23:39:17,452 [92mINFO[0m | /heads_list.0/center_z/center_z.1/Conv   | Conv          | BPU     | 1.326757  | 0.739395          | 0.762405         | si32             |
+2026-08-05 23:39:17,452 [92mINFO[0m | /heads_list.0/dim/dim.0/dim.0.0/Conv     | Conv          | BPU     | 2.17318   | 0.717282          | --               | si8              |
+2026-08-05 23:39:17,452 [92mINFO[0m | /heads_list.0/dim/dim.0/dim.0.2/Relu     | Relu          | BPU     | --        | 0.867204          | --               | si8              |
+2026-08-05 23:39:17,452 [92mINFO[0m | /heads_list.0/dim/dim.1/Conv             | Conv          | BPU     | 0.682141  | 0.997825          | 0.997323         | si32             |
+2026-08-05 23:39:17,452 [92mINFO[0m | /heads_list.0/rot/rot.0/rot.0.0/Conv     | Conv          | BPU     | 2.17318   | 0.528622          | --               | si8              |
+2026-08-05 23:39:17,452 [92mINFO[0m | /heads_list.0/rot/rot.0/rot.0.2/Relu     | Relu          | BPU     | --        | 0.767252          | --               | si8              |
+2026-08-05 23:39:17,452 [92mINFO[0m | /heads_list.0/rot/rot.1/Conv             | Conv          | BPU     | 1.484894  | 0.217748          | 0.231131         | si32             |
+2026-08-05 23:39:17,452 [92mINFO[0m | /heads_list.0/vel/vel.0/vel.0.0/Conv     | Conv          | BPU     | 2.17318   | 0.636112          | --               | si8              |
+2026-08-05 23:39:17,452 [92mINFO[0m | /heads_list.0/vel/vel.0/vel.0.2/Relu     | Relu          | BPU     | --        | 0.495051          | --               | si8              |
+2026-08-05 23:39:17,452 [92mINFO[0m | /heads_list.0/vel/vel.1/Conv             | Conv          | BPU     | 2.083525  | 0.545685          | 0.605838         | si32             |
+2026-08-05 23:39:17,452 [92mINFO[0m | /heads_list.0/hm/hm.0/hm.0.0/Conv        | Conv          | BPU     | 2.17318   | 0.786551          | --               | si8              |
+2026-08-05 23:39:17,452 [92mINFO[0m | /heads_list.0/hm/hm.0/hm.0.2/Relu        | Relu          | BPU     | --        | 0.813465          | --               | si8              |
+2026-08-05 23:39:17,452 [92mINFO[0m | /heads_list.0/hm/hm.1/Conv               | Conv          | BPU     | 1.509328  | 0.985354          | 0.991649         | si32             |
+2026-08-05 23:39:17,452 [92mINFO[0m | /Concat_1                                | Concat        | BPU+VPU | --        | 0.967027          | 0.975186         | si32,f32         |
+2026-08-05 23:39:17,452 [92mINFO[0m | ...ist.1/center/center.0/center.0.0/Conv | Conv          | BPU     | 2.17318   | 0.767398          | --               | si8              |
+2026-08-05 23:39:17,452 [92mINFO[0m | ...ist.1/center/center.0/center.0.2/Relu | Relu          | BPU     | --        | 0.841278          | --               | si8              |
+2026-08-05 23:39:17,452 [92mINFO[0m | /heads_list.1/center/center.1/Conv       | Conv          | BPU     | 0.597904  | 0.994622          | 0.995308         | si32             |
+2026-08-05 23:39:17,453 [92mINFO[0m | ...center_z/center_z.0/center_z.0.0/Conv | Conv          | BPU     | 2.17318   | 0.625424          | --               | si8              |
+2026-08-05 23:39:17,453 [92mINFO[0m | ...center_z/center_z.0/center_z.0.2/Relu | Relu          | BPU     | --        | 0.780640          | --               | si8              |
+2026-08-05 23:39:17,453 [92mINFO[0m | /heads_list.1/center_z/center_z.1/Conv   | Conv          | BPU     | 1.667627  | 0.827002          | 0.822805         | si32             |
+2026-08-05 23:39:17,453 [92mINFO[0m | /heads_list.1/dim/dim.0/dim.0.0/Conv     | Conv          | BPU     | 2.17318   | 0.734748          | --               | si8              |
+2026-08-05 23:39:17,453 [92mINFO[0m | /heads_list.1/dim/dim.0/dim.0.2/Relu     | Relu          | BPU     | --        | 0.859923          | --               | si8              |
+2026-08-05 23:39:17,453 [92mINFO[0m | /heads_list.1/dim/dim.1/Conv             | Conv          | BPU     | 1.164377  | 0.990132          | 0.988853         | si32             |
+2026-08-05 23:39:17,453 [92mINFO[0m | /heads_list.1/rot/rot.0/rot.0.0/Conv     | Conv          | BPU     | 2.17318   | 0.636934          | --               | si8              |
+2026-08-05 23:39:17,453 [92mINFO[0m | /heads_list.1/rot/rot.0/rot.0.2/Relu     | Relu          | BPU     | --        | 0.623126          | --               | si8              |
+2026-08-05 23:39:17,453 [92mINFO[0m | /heads_list.1/rot/rot.1/Conv             | Conv          | BPU     | 3.041299  | 0.270025          | 0.284167         | si32             |
+2026-08-05 23:39:17,453 [92mINFO[0m | /heads_list.1/vel/vel.0/vel.0.0/Conv     | Conv          | BPU     | 2.17318   | 0.832815          | --               | si8              |
+2026-08-05 23:39:17,453 [92mINFO[0m | /heads_list.1/vel/vel.0/vel.0.2/Relu     | Relu          | BPU     | --        | 0.517145          | --               | si8              |
+2026-08-05 23:39:17,453 [92mINFO[0m | /heads_list.1/vel/vel.1/Conv             | Conv          | BPU     | 1.978046  | 0.595034          | 0.635647         | si32             |
+2026-08-05 23:39:17,453 [92mINFO[0m | /heads_list.1/hm/hm.0/hm.0.0/Conv        | Conv          | BPU     | 2.17318   | 0.818099          | --               | si8              |
+2026-08-05 23:39:17,453 [92mINFO[0m | /heads_list.1/hm/hm.0/hm.0.2/Relu        | Relu          | BPU     | --        | 0.840321          | --               | si8              |
+2026-08-05 23:39:17,453 [92mINFO[0m | /heads_list.1/hm/hm.1/Conv               | Conv          | BPU     | 1.343146  | 0.977667          | 0.992512         | si32             |
+2026-08-05 23:39:17,453 [92mINFO[0m | /Concat_2                                | Concat        | BPU+VPU | --        | 0.969107          | 0.983319         | si32,f32         |
+2026-08-05 23:39:17,453 [92mINFO[0m | ...ist.2/center/center.0/center.0.0/Conv | Conv          | BPU     | 2.17318   | 0.919628          | --               | si8              |
+2026-08-05 23:39:17,453 [92mINFO[0m | ...ist.2/center/center.0/center.0.2/Relu | Relu          | BPU     | --        | 0.952170          | --               | si8              |
+2026-08-05 23:39:17,453 [92mINFO[0m | /heads_list.2/center/center.1/Conv       | Conv          | BPU     | 0.580527  | 0.995682          | 0.99594          | si32             |
+2026-08-05 23:39:17,453 [92mINFO[0m | ...center_z/center_z.0/center_z.0.0/Conv | Conv          | BPU     | 2.17318   | 0.691567          | --               | si8              |
+2026-08-05 23:39:17,453 [92mINFO[0m | ...center_z/center_z.0/center_z.0.2/Relu | Relu          | BPU     | --        | 0.800034          | --               | si8              |
+2026-08-05 23:39:17,453 [92mINFO[0m | /heads_list.2/center_z/center_z.1/Conv   | Conv          | BPU     | 1.504313  | 0.860597          | 0.841196         | si32             |
+2026-08-05 23:39:17,453 [92mINFO[0m | /heads_list.2/dim/dim.0/dim.0.0/Conv     | Conv          | BPU     | 2.17318   | 0.820440          | --               | si8              |
+2026-08-05 23:39:17,454 [92mINFO[0m | /heads_list.2/dim/dim.0/dim.0.2/Relu     | Relu          | BPU     | --        | 0.923104          | --               | si8              |
+2026-08-05 23:39:17,454 [92mINFO[0m | /heads_list.2/dim/dim.1/Conv             | Conv          | BPU     | 0.77274   | 0.994948          | 0.995057         | si32             |
+2026-08-05 23:39:17,454 [92mINFO[0m | /heads_list.2/rot/rot.0/rot.0.0/Conv     | Conv          | BPU     | 2.17318   | 0.661420          | --               | si8              |
+2026-08-05 23:39:17,454 [92mINFO[0m | /heads_list.2/rot/rot.0/rot.0.2/Relu     | Relu          | BPU     | --        | 0.655606          | --               | si8              |
+2026-08-05 23:39:17,454 [92mINFO[0m | /heads_list.2/rot/rot.1/Conv             | Conv          | BPU     | 2.033652  | 0.333326          | 0.483682         | si32             |
+2026-08-05 23:39:17,454 [92mINFO[0m | /heads_list.2/vel/vel.0/vel.0.0/Conv     | Conv          | BPU     | 2.17318   | 0.785373          | --               | si8              |
+2026-08-05 23:39:17,454 [92mINFO[0m | /heads_list.2/vel/vel.0/vel.0.2/Relu     | Relu          | BPU     | --        | 0.459153          | --               | si8              |
+2026-08-05 23:39:17,454 [92mINFO[0m | /heads_list.2/vel/vel.1/Conv             | Conv          | BPU     | 1.993297  | 0.566358          | 0.655878         | si32             |
+2026-08-05 23:39:17,454 [92mINFO[0m | /heads_list.2/hm/hm.0/hm.0.0/Conv        | Conv          | BPU     | 2.17318   | 0.833308          | --               | si8              |
+2026-08-05 23:39:17,454 [92mINFO[0m | /heads_list.2/hm/hm.0/hm.0.2/Relu        | Relu          | BPU     | --        | 0.862611          | --               | si8              |
+2026-08-05 23:39:17,454 [92mINFO[0m | /heads_list.2/hm/hm.1/Conv               | Conv          | BPU     | 1.331761  | 0.974357          | 0.990702         | si32             |
+2026-08-05 23:39:17,454 [92mINFO[0m | /Concat_3                                | Concat        | BPU+VPU | --        | 0.969072          | 0.985111         | si32,f32         |
+2026-08-05 23:39:17,454 [92mINFO[0m | ...ist.3/center/center.0/center.0.0/Conv | Conv          | BPU     | 2.17318   | 0.780804          | --               | si8              |
+2026-08-05 23:39:17,454 [92mINFO[0m | ...ist.3/center/center.0/center.0.2/Relu | Relu          | BPU     | --        | 0.853676          | --               | si8              |
+2026-08-05 23:39:17,454 [92mINFO[0m | /heads_list.3/center/center.1/Conv       | Conv          | BPU     | 0.717684  | 0.993573          | 0.993548         | si32             |
+2026-08-05 23:39:17,454 [92mINFO[0m | ...center_z/center_z.0/center_z.0.0/Conv | Conv          | BPU     | 2.17318   | 0.698580          | --               | si8              |
+2026-08-05 23:39:17,454 [92mINFO[0m | ...center_z/center_z.0/center_z.0.2/Relu | Relu          | BPU     | --        | 0.850154          | --               | si8              |
+2026-08-05 23:39:17,454 [92mINFO[0m | /heads_list.3/center_z/center_z.1/Conv   | Conv          | BPU     | 1.615489  | 0.724317          | 0.825799         | si32             |
+2026-08-05 23:39:17,454 [92mINFO[0m | /heads_list.3/dim/dim.0/dim.0.0/Conv     | Conv          | BPU     | 2.17318   | 0.658904          | --               | si8              |
+2026-08-05 23:39:17,454 [92mINFO[0m | /heads_list.3/dim/dim.0/dim.0.2/Relu     | Relu          | BPU     | --        | 0.646744          | --               | si8              |
+2026-08-05 23:39:17,454 [92mINFO[0m | /heads_list.3/dim/dim.1/Conv             | Conv          | BPU     | 1.190375  | 0.890012          | 0.952265         | si32             |
+2026-08-05 23:39:17,454 [92mINFO[0m | /heads_list.3/rot/rot.0/rot.0.0/Conv     | Conv          | BPU     | 2.17318   | 0.700187          | --               | si8              |
+2026-08-05 23:39:17,455 [92mINFO[0m | /heads_list.3/rot/rot.0/rot.0.2/Relu     | Relu          | BPU     | --        | 0.565340          | --               | si8              |
+2026-08-05 23:39:17,455 [92mINFO[0m | /heads_list.3/rot/rot.1/Conv             | Conv          | BPU     | 3.064752  | 0.199231          | 0.531337         | si32             |
+2026-08-05 23:39:17,455 [92mINFO[0m | /heads_list.3/vel/vel.0/vel.0.0/Conv     | Conv          | BPU     | 2.17318   | 0.994881          | --               | si8              |
+2026-08-05 23:39:17,455 [92mINFO[0m | /heads_list.3/vel/vel.0/vel.0.2/Relu     | Relu          | BPU     | --        | 0.000000          | --               | si8              |
+2026-08-05 23:39:17,455 [92mINFO[0m | /heads_list.3/vel/vel.1/Conv             | Conv          | BPU     | 0.020166  | 0.073781          | 0.0757489        | si32             |
+2026-08-05 23:39:17,455 [92mINFO[0m | /heads_list.3/hm/hm.0/hm.0.0/Conv        | Conv          | BPU     | 2.17318   | 0.793132          | --               | si8              |
+2026-08-05 23:39:17,455 [92mINFO[0m | /heads_list.3/hm/hm.0/hm.0.2/Relu        | Relu          | BPU     | --        | 0.822236          | --               | si8              |
+2026-08-05 23:39:17,455 [92mINFO[0m | /heads_list.3/hm/hm.1/Conv               | Conv          | BPU     | 0.935782  | 0.985481          | 0.992506         | si32             |
+2026-08-05 23:39:17,455 [92mINFO[0m | /Concat_4                                | Concat        | BPU+VPU | --        | 0.973788          | 0.98579          | si32,f32         |
+2026-08-05 23:39:17,455 [92mINFO[0m | ...ist.4/center/center.0/center.0.0/Conv | Conv          | BPU     | 2.17318   | 0.686692          | --               | si8              |
+2026-08-05 23:39:17,455 [92mINFO[0m | ...ist.4/center/center.0/center.0.2/Relu | Relu          | BPU     | --        | 0.809193          | --               | si8              |
+2026-08-05 23:39:17,455 [92mINFO[0m | /heads_list.4/center/center.1/Conv       | Conv          | BPU     | 0.643624  | 0.988860          | 0.99051          | si32             |
+2026-08-05 23:39:17,455 [92mINFO[0m | ...center_z/center_z.0/center_z.0.0/Conv | Conv          | BPU     | 2.17318   | 0.651702          | --               | si8              |
+2026-08-05 23:39:17,455 [92mINFO[0m | ...center_z/center_z.0/center_z.0.2/Relu | Relu          | BPU     | --        | 0.786621          | --               | si8              |
+2026-08-05 23:39:17,455 [92mINFO[0m | /heads_list.4/center_z/center_z.1/Conv   | Conv          | BPU     | 1.517239  | 0.842602          | 0.84355          | si32             |
+2026-08-05 23:39:17,455 [92mINFO[0m | /heads_list.4/dim/dim.0/dim.0.0/Conv     | Conv          | BPU     | 2.17318   | 0.615803          | --               | si8              |
+2026-08-05 23:39:17,455 [92mINFO[0m | /heads_list.4/dim/dim.0/dim.0.2/Relu     | Relu          | BPU     | --        | 0.596449          | --               | si8              |
+2026-08-05 23:39:17,455 [92mINFO[0m | /heads_list.4/dim/dim.1/Conv             | Conv          | BPU     | 1.292353  | 0.873565          | 0.898083         | si32             |
+2026-08-05 23:39:17,455 [92mINFO[0m | /heads_list.4/rot/rot.0/rot.0.0/Conv     | Conv          | BPU     | 2.17318   | 0.609520          | --               | si8              |
+2026-08-05 23:39:17,455 [92mINFO[0m | /heads_list.4/rot/rot.0/rot.0.2/Relu     | Relu          | BPU     | --        | 0.724374          | --               | si8              |
+2026-08-05 23:39:17,455 [92mINFO[0m | /heads_list.4/rot/rot.1/Conv             | Conv          | BPU     | 2.499111  | 0.286796          | 0.39117          | si32             |
+2026-08-05 23:39:17,455 [92mINFO[0m | /heads_list.4/vel/vel.0/vel.0.0/Conv     | Conv          | BPU     | 2.17318   | 0.710378          | --               | si8              |
+2026-08-05 23:39:17,455 [92mINFO[0m | /heads_list.4/vel/vel.0/vel.0.2/Relu     | Relu          | BPU     | --        | 0.260322          | --               | si8              |
+2026-08-05 23:39:17,456 [92mINFO[0m | /heads_list.4/vel/vel.1/Conv             | Conv          | BPU     | 2.796194  | 0.224325          | 0.342764         | si32             |
+2026-08-05 23:39:17,456 [92mINFO[0m | /heads_list.4/hm/hm.0/hm.0.0/Conv        | Conv          | BPU     | 2.17318   | 0.797683          | --               | si8              |
+2026-08-05 23:39:17,456 [92mINFO[0m | /heads_list.4/hm/hm.0/hm.0.2/Relu        | Relu          | BPU     | --        | 0.838535          | --               | si8              |
+2026-08-05 23:39:17,456 [92mINFO[0m | /heads_list.4/hm/hm.1/Conv               | Conv          | BPU     | 1.420328  | 0.976722          | 0.974161         | si32             |
+2026-08-05 23:39:17,456 [92mINFO[0m | /Concat_5                                | Concat        | BPU+VPU | --        | 0.969989          | 0.968992         | si32,f32         |
+2026-08-05 23:39:17,456 [92mINFO[0m | ...ist.5/center/center.0/center.0.0/Conv | Conv          | BPU     | 2.17318   | 0.748296          | --               | si8              |
+2026-08-05 23:39:17,456 [92mINFO[0m | ...ist.5/center/center.0/center.0.2/Relu | Relu          | BPU     | --        | 0.825317          | --               | si8              |
+2026-08-05 23:39:17,456 [92mINFO[0m | /heads_list.5/center/center.1/Conv       | Conv          | BPU     | 0.605533  | 0.991539          | 0.991127         | si32             |
+2026-08-05 23:39:17,456 [92mINFO[0m | ...center_z/center_z.0/center_z.0.0/Conv | Conv          | BPU     | 2.17318   | 0.652012          | --               | si8              |
+2026-08-05 23:39:17,456 [92mINFO[0m | ...center_z/center_z.0/center_z.0.2/Relu | Relu          | BPU     | --        | 0.821091          | --               | si8              |
+2026-08-05 23:39:17,456 [92mINFO[0m | /heads_list.5/center_z/center_z.1/Conv   | Conv          | BPU     | 1.452271  | 0.822783          | 0.849308         | si32             |
+2026-08-05 23:39:17,456 [92mINFO[0m | /heads_list.5/dim/dim.0/dim.0.0/Conv     | Conv          | BPU     | 2.17318   | 0.528534          | --               | si8              |
+2026-08-05 23:39:17,456 [92mINFO[0m | /heads_list.5/dim/dim.0/dim.0.2/Relu     | Relu          | BPU     | --        | 0.644971          | --               | si8              |
+2026-08-05 23:39:17,456 [92mINFO[0m | /heads_list.5/dim/dim.1/Conv             | Conv          | BPU     | 1.599785  | 0.913386          | 0.920257         | si32             |
+2026-08-05 23:39:17,456 [92mINFO[0m | /heads_list.5/rot/rot.0/rot.0.0/Conv     | Conv          | BPU     | 2.17318   | 0.515194          | --               | si8              |
+2026-08-05 23:39:17,456 [92mINFO[0m | /heads_list.5/rot/rot.0/rot.0.2/Relu     | Relu          | BPU     | --        | 0.517887          | --               | si8              |
+2026-08-05 23:39:17,456 [92mINFO[0m | /heads_list.5/rot/rot.1/Conv             | Conv          | BPU     | 2.558463  | 0.218005          | 0.578105         | si32             |
+2026-08-05 23:39:17,456 [92mINFO[0m | /heads_list.5/vel/vel.0/vel.0.0/Conv     | Conv          | BPU     | 2.17318   | 0.618524          | --               | si8              |
+2026-08-05 23:39:17,456 [92mINFO[0m | /heads_list.5/vel/vel.0/vel.0.2/Relu     | Relu          | BPU     | --        | 0.232746          | --               | si8              |
+2026-08-05 23:39:17,456 [92mINFO[0m | /heads_list.5/vel/vel.1/Conv             | Conv          | BPU     | 1.619988  | 0.456757          | 0.482936         | si32             |
+2026-08-05 23:39:17,456 [92mINFO[0m | /heads_list.5/hm/hm.0/hm.0.0/Conv        | Conv          | BPU     | 2.17318   | 0.835603          | --               | si8              |
+2026-08-05 23:39:17,456 [92mINFO[0m | /heads_list.5/hm/hm.0/hm.0.2/Relu        | Relu          | BPU     | --        | 0.855288          | --               | si8              |
+2026-08-05 23:39:17,457 [92mINFO[0m | /heads_list.5/hm/hm.1/Conv               | Conv          | BPU     | 1.1837    | 0.952042          | 0.946281         | si32             |
+2026-08-05 23:39:17,457 [92mINFO[0m | /Concat_6                                | Concat        | BPU+VPU | --        | 0.946226          | 0.942675         | si32,f32         |
+2026-08-05 23:39:17,457 [92mINFO[0m +------------------------------------------+---------------+---------+-----------+-------------------+------------------+------------------+
+2026-08-05 23:39:17,459 [92mINFO[0m +------------+-------------------+------------------+
+2026-08-05 23:39:17,459 [92mINFO[0m | TensorName | Calibrated Cosine | Quantized Cosine |
+2026-08-05 23:39:17,459 [92mINFO[0m +------------+-------------------+------------------+
+2026-08-05 23:39:17,459 [92mINFO[0m | head_0     | 0.967027          | 0.975186         |
+2026-08-05 23:39:17,459 [92mINFO[0m | head_1     | 0.969107          | 0.983319         |
+2026-08-05 23:39:17,459 [92mINFO[0m | head_2     | 0.969072          | 0.985111         |
+2026-08-05 23:39:17,459 [92mINFO[0m | head_3     | 0.973788          | 0.98579          |
+2026-08-05 23:39:17,459 [92mINFO[0m | head_4     | 0.969989          | 0.968992         |
+2026-08-05 23:39:17,459 [92mINFO[0m | head_5     | 0.946226          | 0.942675         |
+2026-08-05 23:39:17,459 [92mINFO[0m +------------+-------------------+------------------+
+2026-08-05 23:39:17,729 [92mINFO[0m Start to compile model.
+[                                                  ]0%[-                                                 ]1%[=                                                 ]2%[=-                                                ]3%[==                                                ]4%[==-                                               ]5%[===                                               ]6%[===-                                              ]7%[====                                              ]8%[====-                                             ]9%[=====                                             ]10%[=====-                                            ]11%[======                                            ]12%[======-                                           ]13%[=======                                           ]14%[=======-                                          ]15%[========                                          ]16%[========-                                         ]17%[=========                                         ]18%[=========-                                        ]19%[==========                                        ]20%[==========-                                       ]21%[===========                                       ]22%[===========-                                      ]23%[============                                      ]24%[============-                                     ]25%[=============                                     ]26%[=============-                                    ]27%[==============                                    ]28%[==============-                                   ]29%[===============                                   ]30%[===============-                                  ]31%[================                                  ]32%[================-                                 ]33%[=================                                 ]34%[=================-                                ]35%[==================                                ]36%[==================-                               ]37%[===================                               ]38%[===================-                              ]39%[====================                              ]40%[====================-                             ]41%[=====================                             ]42%[=====================-                            ]43%[======================                            ]44%[======================-                           ]45%[=======================                           ]46%[=======================-                          ]47%[========================                          ]48%[========================-                         ]49%[=========================                         ]50%[=========================-                        ]51%[==========================                        ]52%[==========================-                       ]53%[===========================                       ]54%[===========================-                      ]55%[============================                      ]56%[============================-                     ]57%[=============================                     ]58%[=============================-                    ]59%[==============================                    ]60%[==============================-                   ]61%[===============================                   ]62%[===============================-                  ]63%[================================                  ]64%[================================-                 ]65%[=================================                 ]66%[=================================-                ]67%[==================================                ]68%[==================================-               ]69%[===================================               ]70%[===================================-              ]71%[====================================              ]72%[====================================-             ]73%[=====================================             ]74%[=====================================-            ]75%[======================================            ]76%[======================================-           ]77%[=======================================           ]78%[=======================================-          ]79%[========================================          ]80%[========================================-         ]81%[=========================================         ]82%[=========================================-        ]83%[==========================================        ]84%[==========================================-       ]85%[===========================================       ]86%[===========================================-      ]87%[============================================      ]88%[============================================-     ]89%[=============================================     ]90%[=============================================-    ]91%[==============================================    ]92%[==============================================-   ]93%[===============================================   ]94%[===============================================-  ]95%[================================================  ]96%[================================================- ]97%[================================================= ]98%[=================================================-]99%[==================================================]100%
+[15h:46m:02s:254838436ns INFO hbrt4_log::logger] pid:28419 tid:28419 hbrt4_log/src/logger.rs:402: Logger of HBRT4 initialized, version = 4.2.11
+[15h:46m:02s:254877420ns INFO hbrt4_loader::parsing] pid:28419 tid:28419 hbrt4_loader/src/parsing.rs:91: Load hbm from file; filename="/workspace/revision_rr26/02_fixed_quant_probe/quant_runs/C2_paperv2_max_pc_asym_rand256_expF_oe320/c2_max_pc_asym_expF.hbm"
+2026-08-05 23:46:02,561 [92mINFO[0m Successfully compile the hbm model, generated hbm model is saved at /workspace/revision_rr26/02_fixed_quant_probe/quant_runs/C2_paperv2_max_pc_asym_rand256_expF_oe320/c2_max_pc_asym_expF.hbm
+[15h:46m:02s:739132027ns INFO hbrt4_log::logger] pid:32548 tid:32548 hbrt4_log/src/logger.rs:402: Logger of HBRT4 initialized, version = 4.2.11
+[15h:46m:02s:739188326ns INFO hbrt4_loader::parsing] pid:32548 tid:32548 hbrt4_loader/src/parsing.rs:91: Load hbm from file; filename="/workspace/revision_rr26/02_fixed_quant_probe/quant_runs/C2_paperv2_max_pc_asym_rand256_expF_oe320/c2_max_pc_asym_expF.hbm"
+  FPS=31.75, latency = 31499.799999999999 us, DDR = 505575424 bytes, Compiling HBDK version = "4.2.11"   (see /workspace/revision_rr26/02_fixed_quant_probe/quant_runs/C2_paperv2_max_pc_asym_rand256_expF_oe320/c2_max_pc_asym_expF.html)
+2026-08-05 23:46:06,682 [92mINFO[0m Successfully perf the model, generated result is saved at /workspace/revision_rr26/02_fixed_quant_probe/quant_runs/C2_paperv2_max_pc_asym_rand256_expF_oe320
+2026-08-05 23:46:06,683 [92mINFO[0m hbm_path: /workspace/revision_rr26/02_fixed_quant_probe/quant_runs/C2_paperv2_max_pc_asym_rand256_expF_oe320/c2_max_pc_asym_expF.hbm
+[15h:46m:06s:683351416ns INFO hbrt4_loader::parsing] pid:28419 tid:28419 hbrt4_loader/src/parsing.rs:42: Load hbm header from file; filename="/workspace/revision_rr26/02_fixed_quant_probe/quant_runs/C2_paperv2_max_pc_asym_rand256_expF_oe320/c2_max_pc_asym_expF.hbm"
+[15h:46m:06s:683666514ns INFO hbrt4_log::logger] pid:28419 tid:28419 hbrt4_log/src/logger.rs:402: Logger of HBRT4 initialized, version = 4.2.11
+[15h:46m:06s:683679960ns INFO hbrt4_loader::parsing] pid:28419 tid:28419 hbrt4_loader/src/parsing.rs:91: Load hbm from file; filename="/workspace/revision_rr26/02_fixed_quant_probe/quant_runs/C2_paperv2_max_pc_asym_rand256_expF_oe320/c2_max_pc_asym_expF.hbm"
+2026-08-05 23:46:06,814 [92mINFO[0m ************************* c2_max_pc_asym_expF *************************
+2026-08-05 23:46:06,815 [92mINFO[0m ############# model deps info #############
+2026-08-05 23:46:06,815 [92mINFO[0m builder version     : 3.3.22
+2026-08-05 23:46:06,815 [92mINFO[0m hbdk version        : 4.2.11
+2026-08-05 23:46:06,815 [92mINFO[0m hmct version        : 2.4.1
+2026-08-05 23:46:06,815 [92mINFO[0m ############# model_parameters info #############
+2026-08-05 23:46:06,816 [92mINFO[0m onnx_model          : /workspace/export/conv2d_only_centerpoint.onnx
+2026-08-05 23:46:06,816 [92mINFO[0m BPU march           : nash-e
+2026-08-05 23:46:06,816 [92mINFO[0m layer_out_dump      : False
+2026-08-05 23:46:06,816 [92mINFO[0m working dir         : /workspace/revision_rr26/02_fixed_quant_probe/quant_runs/C2_paperv2_max_pc_asym_rand256_expF_oe320
+2026-08-05 23:46:06,816 [92mINFO[0m output_model_file_prefix: c2_max_pc_asym_expF
+2026-08-05 23:46:06,816 [92mINFO[0m node_info           : {}
+2026-08-05 23:46:06,816 [92mINFO[0m ############# input_parameters info #############
+2026-08-05 23:46:06,816 [92mINFO[0m ------------------------------------------
+2026-08-05 23:46:06,816 [92mINFO[0m ---------input info : bev_features ---------
+2026-08-05 23:46:06,817 [92mINFO[0m input_name          : bev_features
+2026-08-05 23:46:06,817 [92mINFO[0m input_type_rt       : featuremap
+2026-08-05 23:46:06,817 [92mINFO[0m input_space&range   : regular
+2026-08-05 23:46:06,817 [92mINFO[0m input_type_train    : featuremap
+2026-08-05 23:46:06,817 [92mINFO[0m input_layout_train  : NCHW
+2026-08-05 23:46:06,817 [92mINFO[0m norm_type           : no_preprocess
+2026-08-05 23:46:06,817 [92mINFO[0m input_shape         : 1x32x1088x1088
+2026-08-05 23:46:06,817 [92mINFO[0m mean_value          : []
+2026-08-05 23:46:06,817 [92mINFO[0m scale_value         : []
+2026-08-05 23:46:06,817 [92mINFO[0m std_value           : []
+2026-08-05 23:46:06,817 [92mINFO[0m separate_batch      : False
+2026-08-05 23:46:06,818 [92mINFO[0m ---------input info : bev_features end -------
+2026-08-05 23:46:06,818 [92mINFO[0m ------------------------------------------
+2026-08-05 23:46:06,818 [92mINFO[0m ############# calibration_parameters info #############
+2026-08-05 23:46:06,818 [92mINFO[0m calibration_type    : max
+2026-08-05 23:46:06,818 [92mINFO[0m max_percentile      : None
+2026-08-05 23:46:06,818 [92mINFO[0m optimization        : asymmetric
+2026-08-05 23:46:06,818 [92mINFO[0m per_channel         : True
+2026-08-05 23:46:06,818 [92mINFO[0m cal_data_dir        : /workspace/export/train_conv2d_expF/bev
+2026-08-05 23:46:06,818 [92mINFO[0m ############# compiler_parameters info #############
+2026-08-05 23:46:06,818 [92mINFO[0m debug               : True
+2026-08-05 23:46:06,818 [92mINFO[0m optimize_level      : O2
+2026-08-05 23:46:06,819 [92mINFO[0m compile_mode        : latency
+2026-08-05 23:46:06,819 [92mINFO[0m core_num            : 1
+2026-08-05 23:46:06,819 [92mINFO[0m balance_factor      : 100
+2026-08-05 23:46:06,819 [92mINFO[0m input_source        : {'bev_features': 'ddr'}
+2026-08-05 23:46:06,819 [92mINFO[0m cache_mode          : disable
+2026-08-05 23:46:06,819 [92mINFO[0m hbm_path: /workspace/revision_rr26/02_fixed_quant_probe/quant_runs/C2_paperv2_max_pc_asym_rand256_expF_oe320/c2_max_pc_asym_expF.hbm
+[15h:46m:06s:819645642ns INFO hbrt4_loader::parsing] pid:28419 tid:28419 hbrt4_loader/src/parsing.rs:42: Load hbm header from file; filename="/workspace/revision_rr26/02_fixed_quant_probe/quant_runs/C2_paperv2_max_pc_asym_rand256_expF_oe320/c2_max_pc_asym_expF.hbm"
+[15h:46m:06s:819804244ns INFO hbrt4_log::logger] pid:28419 tid:28419 hbrt4_log/src/logger.rs:402: Logger of HBRT4 initialized, version = 4.2.11
+[15h:46m:06s:819812342ns INFO hbrt4_loader::parsing] pid:28419 tid:28419 hbrt4_loader/src/parsing.rs:91: Load hbm from file; filename="/workspace/revision_rr26/02_fixed_quant_probe/quant_runs/C2_paperv2_max_pc_asym_rand256_expF_oe320/c2_max_pc_asym_expF.hbm"
+2026-08-05 23:46:06,915 [92mINFO[0m ############# Model input/output info #############
+2026-08-05 23:46:06,915 [92mINFO[0m NAME         TYPE   SHAPE               DATA_TYPE
+2026-08-05 23:46:06,916 [92mINFO[0m ------------ ------ ------------------- ---------
+2026-08-05 23:46:06,916 [92mINFO[0m bev_features input  [1, 32, 1088, 1088] FLOAT32
+2026-08-05 23:46:06,916 [92mINFO[0m head_0       output [1, 11, 136, 136]   FLOAT32
+2026-08-05 23:46:06,916 [92mINFO[0m head_1       output [1, 12, 136, 136]   FLOAT32
+2026-08-05 23:46:06,916 [92mINFO[0m head_2       output [1, 12, 136, 136]   FLOAT32
+2026-08-05 23:46:06,916 [92mINFO[0m head_3       output [1, 11, 136, 136]   FLOAT32
+2026-08-05 23:46:06,916 [92mINFO[0m head_4       output [1, 12, 136, 136]   FLOAT32
+2026-08-05 23:46:06,916 [92mINFO[0m head_5       output [1, 12, 136, 136]   FLOAT32
+2026-08-05 23:46:06,922 [92mINFO[0m The hb_compile completes running.
+HBDK hbm perf SUCCESS
