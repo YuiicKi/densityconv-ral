@@ -38,8 +38,9 @@ Stock OpenPCDet's `--fix_random_seed` seeds with a fixed internal constant
 with `--seed N`, keeping the stock rank offset: process rank `r` calls
 `common_utils.set_random_seed(N + r)` (so on 2 GPUs, `--seed 13` uses process
 seeds 13 and 14), and `N` is passed to `build_dataloader` as the base seed.
-The training logs record both flags in the argument dump. No other change to
-the stock training loop.
+The training logs record both flags in the argument dump. The released
+`tools/train.py` is the exact training entry point used for the reported
+multi-seed runs.
 
 ## Amplification baseline
 

@@ -65,6 +65,14 @@ from .dense_pillar_backbone_2d import PillarDenseBackBone8x
   `mask/` subdirectories.
 - Path defaults inside the deploy scripts were anonymized to `~/WORKDIR`;
   pass explicit arguments when running.
+- The paper's aggregate activation figures (Sec. III-B: 99.9th-percentile
+  2.33 vs. 5.15, observed max 19.9 vs. 57.6) are the `p99_9` / `exact_max`
+  fields of the first BEV convolution observers in `activation_stats.py`
+  output: key `backbone_3d.conv1.init_conv.conv` (DensityConv) and
+  `backbone_3d.conv1.0` (Conv2d-only). These hook the inner `Conv2d`
+  submodule, i.e. the **pre-gate** convolution output before the occupancy
+  scale is applied; the scale itself is recorded separately under
+  `*.density_scale`.
 - The amplification config (`*_sparseconv.yaml`) reproduces the single-run
   baseline; its actual launch parameters (single-GPU, batch 4) override the
   YAML defaults, as recorded in the paper.
