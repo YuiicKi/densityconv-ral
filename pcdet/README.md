@@ -4,7 +4,9 @@ This directory contains the **incremental code** that adds DensityConv to a
 compatible [OpenPCDet](https://github.com/open-mmlab/OpenPCDet) installation.
 It is not a standalone training framework; the host framework provides
 `PillarNet`, `DynamicPillarVFESimple2D`, `BaseBEVBackboneV1`, `CenterHead`,
-data loading, and training entry points (`tools/train.py`, `tools/test.py`).
+data loading, and the evaluation entry point (`tools/test.py`). Our
+`tools/train.py` (included here) replaces the host training entry point; see
+`TRAINING.md` for the exact differences from stock OpenPCDet.
 
 ## Contents
 
@@ -20,6 +22,7 @@ data loading, and training entry points (`tools/train.py`, `tools/test.py`).
 | `deploy/gen_dc_bev_for_step7.py`, `deploy/gen_conv2d_bev_for_step7.py` | calibration BEV/mask rendering from training-sample IDs (paired calibration sets) |
 | `deploy/compile_*.yaml` | example hb_compile configs (the fixed-percentile configs used for the paper's main results are in `../compiler_configs/`) |
 | `deploy/activation_stats.py` | full-val activation statistics (Sec. III-B aggregate numbers) |
+| `tools/train.py` | OpenPCDet training entry point with `--seed` and `--local-rank` compatibility |
 | `patches/register_densepillar.patch` | adds the backbone import/registration to the host framework |
 | `TRAINING.md` | exact launch commands, batch-size semantics, seed mechanism |
 
@@ -33,6 +36,7 @@ data loading, and training entry points (`tools/train.py`, `tools/test.py`).
 | `configs/waymo/*.yaml` | `tools/cfgs/waymo_models/` |
 | `configs/dataset_configs/*.yaml` | `tools/cfgs/dataset_configs/` |
 | `deploy/*.py` | `tools/deploy/` |
+| `tools/train.py` | `tools/train.py` — replace the host training entry point |
 
 Register the backbone by applying `patches/register_densepillar.patch`
 (`git apply --check` first), or add the import and `__all__` entry to
