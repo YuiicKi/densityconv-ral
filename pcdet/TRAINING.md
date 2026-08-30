@@ -33,11 +33,13 @@ with the released training logs.
 
 ## Random seed
 
-Stock OpenPCDet's `--fix_random_seed` seeds with a fixed internal constant.
-Our `train.py` additionally accepts `--seed N` and forwards it to
-`common_utils.set_random_seed(N)`, so `--fix_random_seed --seed 13` seeds all
-of Python/NumPy/PyTorch with 13 (the training logs record both flags in the
-argument dump). No other change to the stock training loop.
+Stock OpenPCDet's `--fix_random_seed` seeds with a fixed internal constant
+(666), offset per distributed rank. Our `train.py` only replaces the constant
+with `--seed N`, keeping the stock rank offset: process rank `r` calls
+`common_utils.set_random_seed(N + r)` (so on 2 GPUs, `--seed 13` uses process
+seeds 13 and 14), and `N` is passed to `build_dataloader` as the base seed.
+The training logs record both flags in the argument dump. No other change to
+the stock training loop.
 
 ## Amplification baseline
 
