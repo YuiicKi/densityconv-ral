@@ -8,7 +8,7 @@ BPU*. Internal identifiers in historical logs differ from paper naming — see
 
 | directory | contents | paper reference |
 |---|---|---|
-| `pcdet/` | DensityConv implementation, backbone, training configs (nuScenes + Waymo), exact training commands (`pcdet/TRAINING.md`), ONNX export, calibration BEV rendering, full-val activation-statistics script (drop-in for OpenPCDet; see `pcdet/README.md`) | Sec. III |
+| `pcdet/` | DensityConv implementation, backbone, training configs (nuScenes + Waymo), exact training commands (`pcdet/TRAINING.md`), ONNX export, calibration BEV rendering, full-val activation-statistics and distance-binned-eval scripts (drop-in for OpenPCDet; see `pcdet/README.md`) | Sec. III, Table V |
 | `calibration_ids/` | calibration frame indices, all 5 seeds × 3 budgets (`t2_s{seed}_{budget}_indices.txt`); identical IDs used for both models per seed/budget | Sec. IV-F, Table VI |
 | `compiler_configs/` | per-run hb_compile `config.yaml`, `compile.log`, and per-node calibrated thresholds `quant_info.json` — fixed-percentile main matrix, calibration-method matrix (percentile/pure-max/KL), amplification variant, and FP32-exemption probe runs | Tables VI–VII, Sec. IV-G |
 | `board_pipeline/` | RDK S100 C++ evaluation pipeline source (pillar VFE, BPU inference, rotated-IoU NMS), evaluation queue scripts, nuScenes scorer | Sec. IV-H, Table VIII |

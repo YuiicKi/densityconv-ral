@@ -22,6 +22,7 @@ data loading, and the evaluation entry point (`tools/test.py`). Our
 | `deploy/gen_dc_bev_for_step7.py`, `deploy/gen_conv2d_bev_for_step7.py` | calibration BEV/mask rendering from training-sample IDs (paired calibration sets) |
 | `deploy/compile_*.yaml` | example hb_compile configs (the fixed-percentile configs used for the paper's main results are in `../compiler_configs/`) |
 | `deploy/activation_stats.py` | full-val activation statistics (Sec. III-B aggregate numbers) |
+| `deploy/nusc_range_eval.py` | distance-binned eval (Table V): official-devkit `DetectionEval` with ego-distance filtering on both GT and predictions; the untouched `[0,max)` bin must reproduce the official metrics bit-exactly |
 | `tools/train.py` | OpenPCDet training entry point with `--seed` and `--local-rank` compatibility |
 | `patches/register_densepillar.patch` | adds the backbone import/registration to the host framework |
 | `TRAINING.md` | exact launch commands, batch-size semantics, seed mechanism |
